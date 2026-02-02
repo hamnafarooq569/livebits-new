@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="35" height="35">
+	<defs>
+		<image  width="35" height="35" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjAQMAAAAkFyEaAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAA9JREFUeJxjZAABxmFEAgAPlgAk+E7xugAAAABJRU5ErkJggg=="/>
+		<image width="800" height="800" id="img2" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPgo8c3ZnIGZpbGw9IiMwMDAwMDAiIHdpZHRoPSI4MDBweCIgaGVpZ2h0PSI4MDBweCIgdmlld0JveD0iMCAwIDI0IDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTIgNi4wMzZjLTIuNjY3IDAtNC4zMzMgMS4zMjUtNSAzLjk3NiAxLTEuMzI1IDIuMTY3LTEuODIyIDMuNS0xLjQ5MS43NjEuMTg5IDEuMzA1LjczOCAxLjkwNiAxLjM0NUMxMy4zODcgMTAuODU1IDE0LjUyMiAxMiAxNyAxMmMyLjY2NyAwIDQuMzMzLTEuMzI1IDUtMy45NzYtMSAxLjMyNS0yLjE2NiAxLjgyMi0zLjUgMS40OTEtLjc2MS0uMTg5LTEuMzA1LS43MzgtMS45MDctMS4zNDUtLjk4LS45OS0yLjExNC0yLjEzNC00LjU5My0yLjEzNHpNNyAxMmMtMi42NjcgMC00LjMzMyAxLjMyNS01IDMuOTc2IDEtMS4zMjYgMi4xNjctMS44MjIgMy41LTEuNDkxLjc2MS4xODkgMS4zMDUuNzM4IDEuOTA3IDEuMzQ1Ljk4Ljk4OSAyLjExNSAyLjEzNCA0LjU5NCAyLjEzNCAyLjY2NyAwIDQuMzMzLTEuMzI1IDUtMy45NzYtMSAxLjMyNS0yLjE2NyAxLjgyMi0zLjUgMS40OTEtLjc2MS0uMTg5LTEuMzA1LS43MzgtMS45MDYtMS4zNDVDMTAuNjEzIDEzLjE0NSA5LjQ3OCAxMiA3IDEyeiIvPjwvc3ZnPg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<use id="tailwind-css" href="#img2" transform="matrix(.044,0,0,.044,0,0)"/>
+</svg>
