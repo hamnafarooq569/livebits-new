@@ -71,9 +71,9 @@ export default function ContactCtaSection() {
             href="https://wa.me/923333444825"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col items-center gap-2"
+            className="group flex flex-col lg:items-center gap-2"
           >
-            <div className="flex h-[70px] w-[70px] items-center justify-center rounded-full border-[3px] border-[#fee000] bg-transparent text-[32px] text-[#FFD956] shadow-[0_14px_30px_rgba(0,0,0,0.35)] transition-transform duration-300 group-hover:scale-105">
+            <div className="flex h-12 w-12 lg:h-[70px] lg:w-[70px] items-center justify-center rounded-full border-[3px] border-[#fee000] bg-transparent text-[32px] text-[#FFD956] shadow-[0_14px_30px_rgba(0,0,0,0.35)] transition-transform duration-300 group-hover:scale-105">
               <span className="-mt-[2px]">☎</span>
             </div>
 
@@ -90,7 +90,7 @@ export default function ContactCtaSection() {
       </div>
 
       {/* bottom divider */}
-      <div className="pointer-events-none mt-10 h-[2px] w-full bg-gradient-to-r from-transparent via-[#f3e5c8]/70 to-transparent" />
+      <div className="pointer-events-none mt-10 h-0.5 w-full bg-linear-to-r from-transparent via-[#f3e5c8]/70 to-transparent" />
     </section>
   );
 }

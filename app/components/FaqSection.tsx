@@ -15,11 +15,11 @@ export default function FaqSection({ bgColor = "#EEDC82" }: FaqSectionProps) {
   };
 
   return (
-    <section className="relative w-full py-10 " style={{ backgroundColor: bgColor }}>
-      <div className="mx-auto max-w-7xl px-6 ">
-        <div className="relative overflow-hidden bg-[#eedc82] rounded-[15px] px-6 py-16 shadow-[0_20px_60px_rgba(15,23,42,0.05)] md:px-16">
+    <section className="relative w-full lg:py-10 " style={{ backgroundColor: bgColor }}>
+      <div className="mx-auto max-w-7xl lg:px-6 ">
+        <div className="relative overflow-hidden bg-[#eedc82] rounded-[15px] px-2 lg:px-6 py-16 shadow-[0_20px_60px_rgba(15,23,42,0.05)] md:px-16">
           <div className="relative z-[1] text-center">
-            <span className="inline-flex items-center rounded-[10px] bg-[#fee000] px-6 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-black border border-black">
+            <span className="inline-flex items-center rounded-[10px] bg-[#fee000] lg:px-6 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-black border border-black">
               Still not convinced?
             </span>
 

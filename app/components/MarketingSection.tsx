@@ -7,10 +7,10 @@ export default function MarketingChannelsSection() {
     <section
       className="relative w-full overflow-hidden bg-white pb-10 pt-10">
       {/* content wrapper */}
-      <div className="mx-auto flex max-w-[1250px] flex-col items-center gap-14 px-24 md:flex-row md:items-center md:gap-8">
+      <div className="lg:mx-auto flex max-w-[1250px] flex-col items-center gap-14 px-5 lg:px-24 md:flex-row md:items-center md:gap-8">
         
         {/* ================= RIGHT SIDE (Content) ================= */}
-        <div className="w-full md:max-w-[520px] md:ml-auto text-right md:text-left">
+        <div className="w-full md:max-w-[520px] md:ml-auto text-left  md:text-left">
           <h2 className="text-[32px] font-bold leading-tight ">
             We use various marketing
             <br />
@@ -27,9 +27,9 @@ export default function MarketingChannelsSection() {
           {/* stats row */}
           <div className="mt-5  flex items-center gap-10 text-[#111111] justify-start">
             {/* 50% + Content Strategy */}
-            <div className="flex items-center gap-3">
-              <p className="text-[28px] font-bold leading-none">50%</p>
-              <p className="text-[18px] tracking-[0.1em] uppercase text-black/80">
+            <div className="flex lg:flex-row flex-col items-center gap-3">
+              <p className="lg:text-[28px] font-bold leading-none">50%</p>
+              <p className="lg:text-[18px] tracking-widest uppercase text-black/80">
                 Content Strategy
               </p>
             </div>
@@ -38,9 +38,9 @@ export default function MarketingChannelsSection() {
             <div className="h-14 w-px bg-[#e5dacb]" />
 
             {/* 70% + Audience Groupup */}
-            <div className="flex items-center gap-3">
-              <p className="text-[28px] font-bold leading-none">70%</p>
-              <p className="text-[18px] tracking-[0.1em] uppercase text-black/80">
+            <div className="flex lg:flex-row flex-col items-center gap-3">
+              <p className="lg:text-[28px] font-bold leading-none">70%</p>
+              <p className="lg:text-[18px] tracking-[0.1em] uppercase text-black/80">
                 Audience Groupup
               </p>
             </div>
@@ -52,7 +52,7 @@ export default function MarketingChannelsSection() {
         {/* ================= LEFT SIDE (Image) ================= */}
         <div className="relative flex w-full justify-center">
           {/* chart image only */}
-          <div className="relative h-[320px] w-[320px] md:h-[380px] md:w-[380px]">
+          <div className="relative h-70 w-[320px] lg:h-80 lg:w-[320px] md:h-[380px] md:w-[380px]">
             <Image
               src="/about2.png"
               alt="Sales channels chart"

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function SolutionsZigZagSection() {
   return (
-    <section className="w-full bg-white py-26 md:py-20">
+    <section className="w-full bg-white py-6 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="relative grid grid-cols-1 gap-14 lg:gap-20">
 
@@ -29,7 +29,7 @@ export default function SolutionsZigZagSection() {
             <div className="w-full">
 
               {/* Badge */}
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-black/5 px-3 py-1 text-sm font-medium text-black border border-black">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-black/5 px-1 py-1 lg:px-3 lg:py-1 text-sm font-medium text-black border border-black">
                 <span className="inline-block h-6 w-6 rounded-full bg-yellow-400" />
                 Strategies that work
               </div>

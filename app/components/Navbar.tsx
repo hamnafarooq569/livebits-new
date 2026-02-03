@@ -208,7 +208,7 @@ useEffect(() => {
   return (
     <header
       ref={navRef}
-      className="fixed top-[40px] left-0 right-0 z-50 border-b border-[#E0DDCF]/70 bg-white"
+      className="fixed top-0 lg:top-10 left-0 right-0 z-50 border-b border-[#E0DDCF]/70 bg-white"
     >
 
       <div className="w-full flex items-center px-22 py-3">

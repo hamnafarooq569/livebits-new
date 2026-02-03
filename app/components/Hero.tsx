@@ -19,7 +19,7 @@ export default function AgencyHero() {
         
         {/* LEFT CONTENT */}
         <div className="w-full max-w-2xl text-left">
-          <h1 className="mt-5 text-7xl font-extrabold leading-tight sm:text-5xl md:text-[84px] md:leading-[1.03]">
+          <h1 className="mt-5 text-4xl lg:text-7xl font-extrabold leading-tight sm:text-5xl md:text-[84px] md:leading-[1.03]">
             Custom Web
             <br/>
             Development Agency
@@ -39,7 +39,7 @@ export default function AgencyHero() {
           </div>
 
           {/* TRUST STRIP */}
-          <div className="mt-10 flex items-center gap-10 text-sm font-medium text-white">
+          <div className="mt-10 flex flex-col lg:flex-row items-center gap-10 text-sm font-medium text-white">
           <CursorTooltip label="Review Us on DesignRush">
             <a
               href="https://www.designrush.com/agency/profile/livebits#reviews"
@@ -84,7 +84,7 @@ export default function AgencyHero() {
         </div>
 
         {/* RIGHT SIDE (STACKED VIDEO CARDS) */}
-        <div className="w-full lg:flex-1 flex justify-end overflow-visible">
+        <div className="w-full hidden lg:flex-1 lg:flex justify-end overflow-visible">
           <div className="w-full max-w-[560px]">
             <StackedVideoCardsMirrored />
           </div>

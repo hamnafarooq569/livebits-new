@@ -6,8 +6,8 @@ import { FC } from "react";
 
 const TopAnnouncementBar: FC = () => {
   return (
-    <div className="sticky top-0 z-[9999] w-full bg-[#fee000] text-black text-[12px]">
-      <div className="mx-auto flex max-w-[1250px] items-center justify-between px-6 py-2">
+    <div className="sticky top-0 z-9999 w-full bg-[#fee000] text-black text-[12px]">
+      <div className="mx-auto hidden lg:flex max-w-[1250px] items-center justify-between px-6 py-2">
 
         {/* LEFT SIDE */}
         <div className="flex flex-wrap items-center gap-4">

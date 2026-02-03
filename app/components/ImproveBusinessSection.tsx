@@ -34,54 +34,55 @@ export default function ImproveBusinessSection() {
         </p>
 
         {/* ==== GRID ==== */}
-        <div className="mt-8 grid gap-8 md:grid-cols-4 auto-rows-[230px]">
+        <div className="mt-8 grid gap-8 md:grid-cols-4 lg:auto-rows-[230px]">
           {/* COL 1: Collect Leads (row-span 2) */}
           <div className="md:row-span-2 relative">
-            {/* Top-right icon stays fixed */}
-            <div className="absolute top-5 right-5 h-12 w-12 z-10">
-              <Image
-                src="/comp icon.png"
-                alt="Top Icon"
-                width={48}
-                height={48}
-                className="object-contain"
-              />
-            </div>
+  <div className="relative rounded-[15px] bg-[#0F1010] border border-white h-max px-3 py-4 lg:px-10 lg:py-10 lg:h-[500px] text-white shadow-[0_28px_80px_rgba(0,0,0,0.65)] transform transition-transform duration-300 hover:scale-105 flex flex-col justify-between">
 
-            {/* Card content */}
-            <div className="rounded-[15px] bg-[#0F1010] border border-white px-10 py-10 h-[500px] text-white shadow-[0_28px_80px_rgba(0,0,0,0.65)]
-              transform transition-transform duration-300 hover:scale-105 flex flex-col justify-between relative z-0">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#FFD956]">
-                Collect Leads
-              </p>
-              <h3 className="mt-3 text-[22px] font-semibold leading-snug">
-                Search Engine
-                <br />
-                Optimization
-              </h3>
-              <p className="mt-2 text-[16px] text-[#D4D4D4]">
-                Proven SEO strategies that serve the needs of your business.
-              </p>
+    {/* Top-right icon */}
+    <div className="absolute top-6 right-6 h-12 w-12 z-20">
+      <Image
+        src="/comp icon.png"
+        alt="Collect Leads Icon"
+        width={48}
+        height={48}
+        className="object-contain"
+      />
+    </div>
 
-              <div className="relative my-6 h-24 w-full flex justify-center">
-                <Image
-                  src="/Leads illustration.png"
-                  alt="Leads illustration"
-                  width={120}
-                  height={120}
-                  className="object-contain"
-                />
-              </div>
+    <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#FFD956]">
+      Collect Leads
+    </p>
 
-              <Link
-                href="/service/digital-marketing/search-engine-optimization"
-                className="mt-5 inline-flex items-center gap-2 text-[13px] font-medium text-[#FFD956] underline-offset-4 hover:underline"
-              >
-                Learn More
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </div>
-          </div>
+    <h3 className="mt-3 text-[22px] font-semibold leading-snug">
+      Search Engine
+      <br />
+      Optimization
+    </h3>
+
+    <p className="mt-2 text-[16px] text-[#D4D4D4]">
+      Proven SEO strategies that serve the needs of your business.
+    </p>
+
+    <div className="relative my-6 h-24 w-full flex justify-center">
+      <Image
+        src="/Leads illustration.png"
+        alt="Leads illustration"
+        width={120}
+        height={120}
+        className="object-contain"
+      />
+    </div>
+
+    <Link
+      href="/service/digital-marketing/search-engine-optimization"
+      className="mt-5 inline-flex items-center gap-2 text-[13px] font-medium text-[#FFD956] underline-offset-4 hover:underline"
+    >
+      Learn More
+      <ArrowRight className="h-3.5 w-3.5" />
+    </Link>
+  </div>
+</div>
 
           {/* COL 2: Guest Post */}
           <ServiceCard
@@ -94,7 +95,7 @@ export default function ImproveBusinessSection() {
 
           {/* COL 3 & 4: Custom Web Development */}
           <div
-            className="md:col-span-2 relative rounded-[15px] border border-white bg-[#090B09] px-8 py-9 text-left text-white shadow-[0_22px_70px_rgba(0,0,0,0.55)] flex items-center justify-between overflow-hidden
+            className="md:col-span-2 relative rounded-[15px] border border-white bg-[#090B09] px-3 py-4  lg:px-8 lg:py-9 text-left text-white shadow-[0_22px_70px_rgba(0,0,0,0.55)] flex items-center justify-between overflow-hidden
           transform transition-transform duration-300 hover:scale-105 hover:shadow-[0_28px_100px_rgba(0,0,0,0.65)]"
           >
             <div className="max-w-[65%]">
