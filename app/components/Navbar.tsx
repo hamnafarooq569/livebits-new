@@ -124,7 +124,7 @@ const PRODUCTS_DROPDOWN = [
 ];
 
 const TECH_LOGOS = [
-  { name: "React", src: "/React.png" },
+  { name: "React", src: "/react.png" },
   { name: "Next.js", src: "/nextjs.png" },
   { name: "TypeScript", src: "/typescript.png" },
   { name: "Node.js", src: "/node.png" },
