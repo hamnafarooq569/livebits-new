@@ -19,14 +19,15 @@ export default function AgencyHero() {
         
         {/* LEFT CONTENT */}
         <div className="w-full max-w-2xl text-left">
-          <h1 className="mt-5 text-4xl lg:text-7xl font-extrabold leading-tight sm:text-5xl md:text-[84px] md:leading-[1.03]">
+          <h1 className="mt-10  text-4xl lg:text-6xl font-extrabold leading-tight sm:text-5xl md:text-[84px] md:leading-[1.03]">
             Custom Web
             <br/>
-            Development Agency
+            Development <br/>
+            Agency
           </h1>
 
-          <p className="mt-6 max-w-xl text-base md:text-2xl text-white">
-            Custom Websites, Branding & Digital Marketing
+          <p className="mt-10 border-l-2 border-[#FFD956]/60 pl-4 max-w-xl text-base md:text-xl text-white">
+            Amplify your online presence with LiveBits’ full-stack digital marketing solutions, designed to increase visibility, drive qualified traffic, and convert audiences into long-term customers through data-driven strategy and creative execution.
           </p>
 
           <div className="mt-10">

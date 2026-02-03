@@ -143,6 +143,11 @@ export default function Navbar() {
   const [showProducts, setShowProducts] = useState(false);
   const [showOther, setShowOther] = useState(false);
 
+  const [mobileOpen, setMobileOpen] = useState(false);
+const [mobileServices, setMobileServices] = useState(false);
+const [mobileProducts, setMobileProducts] = useState(false);
+const [mobileOther, setMobileOther] = useState(false);
+
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const productsHideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const otherHideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -211,7 +216,7 @@ useEffect(() => {
       className="fixed top-0 lg:top-10 left-0 right-0 z-50 border-b border-[#E0DDCF]/70 bg-white"
     >
 
-      <div className="w-full flex items-center px-22 py-3">
+      <div className="w-full flex items-center px-3 py-4 lg:px-22 lg:py-3">
         <div className="shrink-0">
           <Link href="/" className="block">
             <div className="relative w-28 h-10 cursor-pointer">
@@ -301,7 +306,7 @@ useEffect(() => {
           })}
         </nav>
 
-        <button className="md:hidden ml-auto inline-flex items-center rounded-md border border-[#CBC6B7] px-2 py-1 text-xs">
+        <button className="md:hidden ml-auto inline-flex items-center rounded-md border border-[#CBC6B7] px-2 py-1 text-xs" onClick={()=>setMobileOpen(true)}>
           Menu
         </button>
       </div>
@@ -357,6 +362,128 @@ useEffect(() => {
           </div>
         </div>
       )}
+
+
+
+
+      {mobileOpen && (
+  <div className="fixed inset-0 z-999 bg-black/40 md:hidden">
+    <div className="absolute right-0 top-0 h-full w-[85%] bg-white p-6 overflow-y-auto">
+      
+      {/* Close */}
+      <button
+        className="mb-6 text-sm font-medium"
+        onClick={() => setMobileOpen(false)}
+      >
+        ✕ Close
+      </button>
+
+      <ul className="space-y-4 text-[16px] font-medium">
+        {/* Normal Links */}
+        {NAV_ITEMS.filter(i => !i.hasDropdown).map(item => (
+          <li key={item.label}>
+            <Link
+              href={item.href}
+              onClick={() => setMobileOpen(false)}
+              className="block"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+
+        {/* Services */}
+        <li>
+          <button
+            onClick={() => setMobileServices(!mobileServices)}
+            className="flex w-full items-center justify-between"
+          >
+            Services <ChevronDown className="h-4 w-4" />
+          </button>
+
+          {mobileServices && (
+            <div className="mt-3 space-y-4 pl-3">
+              {SERVICES_DROPDOWN.map(cat => (
+                <div key={cat.title}>
+                  <Link
+                    href={cat.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="font-semibold text-[#fee000] block mb-1"
+                  >
+                    {cat.title}
+                  </Link>
+                  <ul className="pl-3 space-y-1 text-[14px]">
+                    {cat.items.map(item => (
+                      <li key={item.label}>
+                        <Link
+                          href={item.href}
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </li>
+
+        {/* Products */}
+        <li>
+          <button
+            onClick={() => setMobileProducts(!mobileProducts)}
+            className="flex w-full items-center justify-between"
+          >
+            Products <ChevronDown className="h-4 w-4" />
+          </button>
+
+          {mobileProducts && (
+            <ul className="mt-3 pl-3 space-y-2 text-[14px]">
+              {PRODUCTS_DROPDOWN.map(item => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+
+        {/* Other */}
+        <li>
+          <button
+            onClick={() => setMobileOther(!mobileOther)}
+            className="flex w-full items-center justify-between"
+          >
+            Other <ChevronDown className="h-4 w-4" />
+          </button>
+
+          {mobileOther && (
+            <ul className="mt-3 pl-3 space-y-2 text-[14px]">
+              {OTHER_DROPDOWN.map(item => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      </ul>
+    </div>
+  </div>
+)}
+
     </header>
   );
 }
