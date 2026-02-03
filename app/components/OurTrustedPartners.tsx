@@ -14,7 +14,7 @@ const partners = [
 
 export default function OurTrustedPartners() {
   return (
-    <section className="py-20 bg-white text-center relative overflow-hidden">
+    <section className="py-20 px-1 bg-white text-center relative overflow-hidden">
 
       {/* ===== HEADING ===== */}
       <div className="mb-1">

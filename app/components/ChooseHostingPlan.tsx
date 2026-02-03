@@ -91,7 +91,7 @@ const plans = [
 
 export default function ChooseHostingPlan() {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-20 bg-white overflow-hidden">
       {/* soft yellow background blobs */}
       <div className="absolute top-0 left-10 w-72 h-72 bg-[#FFD956]/10 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 right-10 w-96 h-96 bg-[#FFD956]/10 rounded-full blur-3xl -z-10" />

@@ -21,7 +21,7 @@ const NAV_ITEMS = [
 
 const OTHER_DROPDOWN = [
   { label: "Our Clients", href: "/our-clients" },
-  { label: "CEO founder", href: "/founder" }
+  { label: "CEO founder", href: "/founder" },
 ];
 
 const SERVICES_DROPDOWN = [
@@ -144,9 +144,12 @@ export default function Navbar() {
   const [showOther, setShowOther] = useState(false);
 
   const [mobileOpen, setMobileOpen] = useState(false);
-const [mobileServices, setMobileServices] = useState(false);
-const [mobileProducts, setMobileProducts] = useState(false);
-const [mobileOther, setMobileOther] = useState(false);
+  const [mobileServices, setMobileServices] = useState(false);
+  const [mobileProducts, setMobileProducts] = useState(false);
+  const [mobileOther, setMobileOther] = useState(false);
+
+  // ✅ sub-services open category
+  const [openServiceCat, setOpenServiceCat] = useState<string | null>(null);
 
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const productsHideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -156,36 +159,27 @@ const [mobileOther, setMobileOther] = useState(false);
     if (hideTimer.current) clearTimeout(hideTimer.current);
     setShowServices(true);
   };
-
   const scheduleCloseServices = () => {
     if (hideTimer.current) clearTimeout(hideTimer.current);
-    hideTimer.current = setTimeout(() => {
-      setShowServices(false);
-    }, 180);
+    hideTimer.current = setTimeout(() => setShowServices(false), 180);
   };
 
   const openProducts = () => {
     if (productsHideTimer.current) clearTimeout(productsHideTimer.current);
     setShowProducts(true);
   };
-
   const scheduleCloseProducts = () => {
     if (productsHideTimer.current) clearTimeout(productsHideTimer.current);
-    productsHideTimer.current = setTimeout(() => {
-      setShowProducts(false);
-    }, 180);
+    productsHideTimer.current = setTimeout(() => setShowProducts(false), 180);
   };
 
   const openOther = () => {
     if (otherHideTimer.current) clearTimeout(otherHideTimer.current);
     setShowOther(true);
   };
-
   const scheduleCloseOther = () => {
     if (otherHideTimer.current) clearTimeout(otherHideTimer.current);
-    otherHideTimer.current = setTimeout(() => {
-      setShowOther(false);
-    }, 180);
+    otherHideTimer.current = setTimeout(() => setShowOther(false), 180);
   };
 
   const closeAllMenus = () => {
@@ -196,45 +190,86 @@ const [mobileOther, setMobileOther] = useState(false);
 
   const navRef = useRef<HTMLElement | null>(null);
 
-useEffect(() => {
-  const handleClickOutside = (event: MouseEvent) => {
-    if (!navRef.current) return;
-    if (!navRef.current.contains(event.target as Node)) {
-      closeAllMenus();
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!navRef.current) return;
+      if (!navRef.current.contains(event.target as Node)) closeAllMenus();
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // ✅ Mobile lock scroll + ESC close
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [mobileOpen]);
+
+  // ✅ Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+    setMobileServices(false);
+    setMobileProducts(false);
+    setMobileOther(false);
+    setOpenServiceCat(null);
+  }, [pathname]);
+
+  // ✅ One-at-a-time accordion
+  const toggleAccordion = (key: "services" | "products" | "other") => {
+    if (key === "services") {
+      setMobileServices((v) => {
+        const next = !v;
+        if (!next) setOpenServiceCat(null);
+        return next;
+      });
+      setMobileProducts(false);
+      setMobileOther(false);
+    }
+    if (key === "products") {
+      setMobileProducts((v) => !v);
+      setMobileServices(false);
+      setMobileOther(false);
+      setOpenServiceCat(null);
+    }
+    if (key === "other") {
+      setMobileOther((v) => !v);
+      setMobileServices(false);
+      setMobileProducts(false);
+      setOpenServiceCat(null);
     }
   };
 
-  document.addEventListener("mousedown", handleClickOutside);
-  return () => document.removeEventListener("mousedown", handleClickOutside);
-}, []);
-
-
+  const isActiveHref = (href: string) =>
+    (href === "/" && pathname === "/") || (href !== "/" && pathname.startsWith(href));
 
   return (
     <header
       ref={navRef}
       className="fixed top-0 lg:top-10 left-0 right-0 z-50 border-b border-[#E0DDCF]/70 bg-white"
     >
-
       <div className="w-full flex items-center px-3 py-4 lg:px-22 lg:py-3">
         <div className="shrink-0">
           <Link href="/" className="block">
             <div className="relative w-28 h-10 cursor-pointer">
-              <Image
-                src="/logo-1.svg"
-                alt="LiveBits Logo"
-                fill
-                className="object-contain"
-                priority
-              />
+              <Image src="/logo-1.svg" alt="LiveBits Logo" fill className="object-contain" priority />
             </div>
           </Link>
         </div>
 
-
         <nav className="hidden md:flex flex-1 items-center justify-center gap-5 text-[14px] font-medium text-black">
           {NAV_ITEMS.map((item) => {
-            const isActive = (item.href === "/" && pathname === "/") || (item.href !== "/" && pathname.startsWith(item.href));
+            const isActive = isActiveHref(item.href);
             const isServices = item.label === "Services";
             const isProducts = item.label === "Products";
             const isOther = item.label === "Other";
@@ -251,53 +286,39 @@ useEffect(() => {
               <div key={item.label} className="relative" {...wrapperProps}>
                 <Link
                   href={item.href}
-                  onClick={() => {
-                    closeAllMenus(); // ✅ always close on click (Services included)
-                  }}
+                  onClick={() => closeAllMenus()}
                   className={`flex items-center gap-1 transition-colors ${
                     isActive ? "text-black" : "text-black hover:text-black"
                   }`}
                 >
-
-
                   {item.label}
                   {item.hasDropdown && <ChevronDown className="h-3 w-3" />}
                 </Link>
-                {/* Show "Other" dropdown */}
+
                 {isOther && showOther && (
                   <div className="absolute left-1/2 z-50 mt-3 w-52 -translate-x-1/2 rounded-md border border-gray-200 bg-white shadow-lg">
                     <ul className="py-2 text-[14px] text-[#333]">
-                      {OTHER_DROPDOWN.map((item) => (
-                        <li key={item.label}>
-                          <Link
-                            href={item.href}
-                            onClick={closeAllMenus}
-                            className="block px-4 py-2 hover:bg-gray-100 hover:text-black"
-                          >
-                            {item.label}
+                      {OTHER_DROPDOWN.map((dd) => (
+                        <li key={dd.label}>
+                          <Link href={dd.href} onClick={closeAllMenus} className="block px-4 py-2 hover:bg-gray-100 hover:text-black">
+                            {dd.label}
                           </Link>
                         </li>
                       ))}
-
                     </ul>
                   </div>
                 )}
-                {/* Show "Products" dropdown */}
+
                 {isProducts && showProducts && (
                   <div className="absolute left-1/2 z-50 mt-3 w-52 -translate-x-1/2 rounded-md border border-gray-200 bg-white shadow-lg">
                     <ul className="py-2 text-[16px] text-[#333]">
                       {PRODUCTS_DROPDOWN.map((prod) => (
                         <li key={prod.label}>
-                          <Link
-                            href={prod.href}
-                            onClick={closeAllMenus}
-                            className="block px-4 py-2 hover:bg-gray-100 hover:text-black"
-                          >
+                          <Link href={prod.href} onClick={closeAllMenus} className="block px-4 py-2 hover:bg-gray-100 hover:text-black">
                             {prod.label}
                           </Link>
                         </li>
                       ))}
-
                     </ul>
                   </div>
                 )}
@@ -306,7 +327,10 @@ useEffect(() => {
           })}
         </nav>
 
-        <button className="md:hidden ml-auto inline-flex items-center rounded-md border border-[#CBC6B7] px-2 py-1 text-xs" onClick={()=>setMobileOpen(true)}>
+        <button
+          className="md:hidden ml-auto inline-flex items-center rounded-md border border-[#CBC6B7] px-3 py-2 text-xs"
+          onClick={() => setMobileOpen(true)}
+        >
           Menu
         </button>
       </div>
@@ -316,10 +340,9 @@ useEffect(() => {
         <div className="absolute left-0 right-0 top-full z-40" onMouseEnter={openServices} onMouseLeave={scheduleCloseServices}>
           <div className="w-full bg-white border-t border-gray-200 shadow-xl">
             <div className="mx-auto flex max-w-[1250px] gap-10 px-8 py-12">
-              {/* Left Sidebar */}
               <div className="w-[220px] border-r border-gray-100 pr-8">
                 <h3 className="text-[16px] font-semibold text-[#111]">Services</h3>
-                <div>
+                <div className="mt-4">
                   <h4 className="text-[16px] font-semibold text-[#111] mb-3">Technologies</h4>
                   <div className="grid grid-cols-3 gap-4 mt-1">
                     {TECH_LOGOS.map((tech) => (
@@ -331,15 +354,12 @@ useEffect(() => {
                 </div>
               </div>
 
-              {/* Right Multi-column Services List */}
               <div className="flex-1 grid grid-cols-4 gap-10 text-[13px]">
                 {SERVICES_DROPDOWN.map((cat) => (
                   <div key={cat.title}>
                     <h4 className="mb-3 text-[20px] font-bold text-[#333]">
                       {cat.title === "Others" ? (
-                        <span className="cursor-default">
-                          {cat.title}
-                        </span>
+                        <span className="cursor-default">{cat.title}</span>
                       ) : (
                         <Link href={cat.href} onClick={closeAllMenus} className="hover:text-black transition-colors">
                           {cat.title}
@@ -347,10 +367,10 @@ useEffect(() => {
                       )}
                     </h4>
                     <ul className="space-y-1 text-[#333]">
-                      {cat.items.map((item) => (
-                        <li key={item.label}>
-                          <Link href={item.href} onClick={closeAllMenus} className="hover:text-black transition-colors">
-                            {item.label}
+                      {cat.items.map((it) => (
+                        <li key={it.label}>
+                          <Link href={it.href} onClick={closeAllMenus} className="hover:text-black transition-colors">
+                            {it.label}
                           </Link>
                         </li>
                       ))}
@@ -363,127 +383,216 @@ useEffect(() => {
         </div>
       )}
 
-
-
-
+      {/* ✅ Mobile Menu */}
       {mobileOpen && (
-  <div className="fixed inset-0 z-999 bg-black/40 md:hidden">
-    <div className="absolute right-0 top-0 h-full w-[85%] bg-white p-6 overflow-y-auto">
-      
-      {/* Close */}
-      <button
-        className="mb-6 text-sm font-medium"
-        onClick={() => setMobileOpen(false)}
-      >
-        ✕ Close
-      </button>
+        <div className="fixed inset-0 z-[999] md:hidden" role="dialog" aria-modal="true">
+          <button aria-label="Close menu" onClick={() => setMobileOpen(false)} className="absolute inset-0 bg-black/55" />
 
-      <ul className="space-y-4 text-[16px] font-medium">
-        {/* Normal Links */}
-        {NAV_ITEMS.filter(i => !i.hasDropdown).map(item => (
-          <li key={item.label}>
-            <Link
-              href={item.href}
-              onClick={() => setMobileOpen(false)}
-              className="block"
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
-
-        {/* Services */}
-        <li>
-          <button
-            onClick={() => setMobileServices(!mobileServices)}
-            className="flex w-full items-center justify-between"
-          >
-            Services <ChevronDown className="h-4 w-4" />
-          </button>
-
-          {mobileServices && (
-            <div className="mt-3 space-y-4 pl-3">
-              {SERVICES_DROPDOWN.map(cat => (
-                <div key={cat.title}>
-                  <Link
-                    href={cat.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="font-semibold text-[#fee000] block mb-1"
-                  >
-                    {cat.title}
-                  </Link>
-                  <ul className="pl-3 space-y-1 text-[14px]">
-                    {cat.items.map(item => (
-                      <li key={item.label}>
-                        <Link
-                          href={item.href}
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+          <div className="absolute right-0 top-0 h-full w-[88%] max-w-[370px] bg-white shadow-2xl overflow-hidden animate-in slide-in-from-right duration-200">
+            <div className="sticky top-0 z-10 bg-white border-b border-[#E0DDCF]/70 px-5 py-4 flex items-center justify-between">
+              <div className="relative w-24 h-8">
+                <Image src="/logo-1.svg" alt="LiveBits Logo" fill className="object-contain" priority />
+              </div>
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="h-9 w-9 rounded-full border border-[#CBC6B7] text-sm grid place-items-center hover:bg-[#f6f5f1] transition"
+              >
+                ✕
+              </button>
             </div>
-          )}
-        </li>
 
-        {/* Products */}
-        <li>
-          <button
-            onClick={() => setMobileProducts(!mobileProducts)}
-            className="flex w-full items-center justify-between"
-          >
-            Products <ChevronDown className="h-4 w-4" />
-          </button>
+            <div className="h-[calc(100%-64px-92px)] overflow-y-auto px-5 py-5">
+              <div className="mb-4 rounded-2xl border border-[#E0DDCF]/70 p-4 bg-[#fffdf2]">
+                <div className="text-[13px] font-semibold text-black mb-3">Technologies we use</div>
+                <div className="grid grid-cols-5 gap-3">
+                  {TECH_LOGOS.slice(0, 10).map((t) => (
+                    <div key={t.name} className="flex items-center justify-center rounded-xl border border-[#E0DDCF]/70 bg-white p-2">
+                      <Image src={t.src} alt={t.name} width={22} height={22} className="opacity-90" />
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-          {mobileProducts && (
-            <ul className="mt-3 pl-3 space-y-2 text-[14px]">
-              {PRODUCTS_DROPDOWN.map(item => (
-                <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
+              <ul className="space-y-2 text-[15px] font-medium">
+                {NAV_ITEMS.filter((i) => !i.hasDropdown).map((item) => {
+                  const active = isActiveHref(item.href);
+                  return (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className={`flex items-center justify-between rounded-xl px-4 py-3 transition ${
+                          active ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-black"
+                        }`}
+                      >
+                        <span>{item.label}</span>
+                        {active && <span className="text-xs">●</span>}
+                      </Link>
+                    </li>
+                  );
+                })}
+
+                {/* Services */}
+                <li className="pt-2">
+                  <button
+                    onClick={() => toggleAccordion("services")}
+                    className="flex w-full items-center justify-between rounded-xl px-4 py-3 hover:bg-[#f6f5f1] transition"
                   >
-                    {item.label}
-                  </Link>
+                    <span>Services</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileServices ? "rotate-180" : ""}`} />
+                  </button>
+
+                  <div className={`grid transition-all duration-200 ${mobileServices ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                    <div className="overflow-hidden">
+                      <div className="mt-2 rounded-xl border border-[#E0DDCF]/70 bg-white p-3">
+                        <div className="space-y-4">
+                          {SERVICES_DROPDOWN.map((cat) => {
+                            const isOpen = openServiceCat === cat.title;
+                            const isActive = isActiveHref(cat.href);
+
+                            return (
+                              <div key={cat.title}>
+                                <div className="flex items-center justify-between gap-2">
+                                  {/* ✅ No background by default, only if OPEN or ACTIVE */}
+                                  <Link
+                                    href={cat.href}
+                                    className={`block rounded-lg px-3 py-2 font-semibold transition ${
+                                      isOpen || isActive
+                                        ? "bg-[#FFF7B8] text-black"
+                                        : "text-black hover:bg-[#f6f5f1]"
+                                    }`}
+                                  >
+                                    {cat.title}
+                                  </Link>
+
+                                  <button
+                                    type="button"
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      e.stopPropagation();
+                                      setOpenServiceCat(isOpen ? null : cat.title);
+                                    }}
+                                    className="px-2 py-2"
+                                    aria-label={`Toggle ${cat.title}`}
+                                  >
+                                    <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                                  </button>
+                                </div>
+
+                                {isOpen && (
+                                  <ul className="mt-2 space-y-1 pl-3">
+                                    {cat.items.map((it) => {
+                                      const active = isActiveHref(it.href);
+                                      return (
+                                        <li key={it.label}>
+                                          <Link
+                                            href={it.href}
+                                            className={`block rounded-lg px-3 py-2 text-[14px] transition ${
+                                              active ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-[#222]"
+                                            }`}
+                                          >
+                                            {it.label}
+                                          </Link>
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
-              ))}
-            </ul>
-          )}
-        </li>
 
-        {/* Other */}
-        <li>
-          <button
-            onClick={() => setMobileOther(!mobileOther)}
-            className="flex w-full items-center justify-between"
-          >
-            Other <ChevronDown className="h-4 w-4" />
-          </button>
-
-          {mobileOther && (
-            <ul className="mt-3 pl-3 space-y-2 text-[14px]">
-              {OTHER_DROPDOWN.map(item => (
-                <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
+                {/* Products */}
+                <li>
+                  <button
+                    onClick={() => toggleAccordion("products")}
+                    className="flex w-full items-center justify-between rounded-xl px-4 py-3 hover:bg-[#f6f5f1] transition"
                   >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      </ul>
-    </div>
-  </div>
-)}
+                    <span>Products</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileProducts ? "rotate-180" : ""}`} />
+                  </button>
 
+                  <div className={`grid transition-all duration-200 ${mobileProducts ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                    <div className="overflow-hidden">
+                      <div className="mt-2 rounded-xl border border-[#E0DDCF]/70 bg-white p-3">
+                        <ul className="space-y-1">
+                          {PRODUCTS_DROPDOWN.map((it) => {
+                            const active = isActiveHref(it.href);
+                            return (
+                              <li key={it.label}>
+                                <Link
+                                  href={it.href}
+                                  className={`block rounded-lg px-3 py-2 text-[14px] transition ${
+                                    active ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-[#222]"
+                                  }`}
+                                >
+                                  {it.label}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                {/* Other */}
+                <li>
+                  <button
+                    onClick={() => toggleAccordion("other")}
+                    className="flex w-full items-center justify-between rounded-xl px-4 py-3 hover:bg-[#f6f5f1] transition"
+                  >
+                    <span>Other</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileOther ? "rotate-180" : ""}`} />
+                  </button>
+
+                  <div className={`grid transition-all duration-200 ${mobileOther ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                    <div className="overflow-hidden">
+                      <div className="mt-2 rounded-xl border border-[#E0DDCF]/70 bg-white p-3">
+                        <ul className="space-y-1">
+                          {OTHER_DROPDOWN.map((it) => {
+                            const active = isActiveHref(it.href);
+                            return (
+                              <li key={it.label}>
+                                <Link
+                                  href={it.href}
+                                  className={`block rounded-lg px-3 py-2 text-[14px] transition ${
+                                    active ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-[#222]"
+                                  }`}
+                                >
+                                  {it.label}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="sticky bottom-0 border-t border-[#E0DDCF]/70 bg-white p-4">
+              <Link
+                href="/contact"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-black px-4 py-3 text-sm font-semibold text-white hover:opacity-90 transition"
+              >
+                <Mail className="h-4 w-4" />
+                Contact Us
+              </Link>
+              <div className="mt-2 text-[11px] text-center text-[#555]">
+                Press <span className="font-semibold">ESC</span> to close
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

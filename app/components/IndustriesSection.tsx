@@ -85,32 +85,29 @@ const INDUSTRIES = [
 
 export default function IndustriesSection() {
   return (
-    <section className="w-full bg-white py-20 px-4">
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        {/* Heading */}
-
         {/* Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {INDUSTRIES.map((item) => (
             <article
               key={item.title}
               className="
-                group relative flex flex-col h-50
-                rounded-[10px] border border-black
-                bg-white pt-2 pb-2 px-2
+                group relative flex flex-col
+                rounded-[10px] border border-black bg-white
+                p-4 sm:p-5 lg:p-6
                 shadow-[0_8px_20px_rgba(0,0,0,0.08)]
                 transition-all duration-300 ease-out
                 hover:bg-black hover:-translate-y-1
                 hover:shadow-[0_20px_50px_rgba(0,0,0,0.45)]
-                hover:border-black
                 cursor-pointer
               "
             >
-
-              <h3 className="text-[24px] font-semibold text-black transition-colors duration-300 group-hover:text-white">
+              <h3 className="text-[18px] sm:text-[20px] lg:text-[22px] font-semibold text-black transition-colors duration-300 group-hover:text-white">
                 {item.title}
               </h3>
-              <p className="mt-1 text-[18px] leading-relaxed text-black transition-colors duration-300 group-hover:text-white">
+
+              <p className="mt-2 text-[14px] sm:text-[15px] lg:text-[16px] leading-relaxed text-black/90 transition-colors duration-300 group-hover:text-white">
                 {item.description}
               </p>
             </article>

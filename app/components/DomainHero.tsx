@@ -73,7 +73,7 @@ export default function Domain() {
       </div>
 
       {/* CENTER CONTENT */}
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 py-28 lg:py-28">
         <div className="flex flex-col items-center text-center">
           <p className="text-[18px] font-semibold tracking-wide text-white">
             Buy a domain and everything else you need

@@ -20,7 +20,7 @@ const testimonials = [
     name: "John Alexon",
     role: "Researcher",
     text: "Distinctively formulate optimal outsid for interdependent schemas to evolve end action items and fully researched vortals niche markets rather than proof processes.",
-    company: "/clientslogos/6.jpg",
+    company: "/clientslogos/6.png",
     rating: 4.5,
     avatarImage: "/quote.svg", // replace with your image
   },

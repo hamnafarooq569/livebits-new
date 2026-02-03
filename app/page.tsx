@@ -4,12 +4,15 @@ import InfiniteImage from "./components/ClientSlide";
 import FaqSection from "./components/FaqSection";
 import Hero from "./components/Hero";
 import ImproveBusinessSection from "./components/ImproveBusinessSection";
+import IndustriesServed from "./components/IndustriesServed";
 import MarketingChannelsSection from "./components/MarketingSection";
 import PromoStatsSection from "./components/PromoStatsSection";
 import ServicesGrid from "./components/ServicesGrid";
 import SolutionsZigZagSection from "./components/StrategiesSection";
 
 import TestimonialsSection from "./components/TestimonialsSection";
+import TrustStatsBar from "./components/TrustStatsBar";
+import WorkingProcess from "./components/WorkingProcess";
 
 
 export default function HomePage() {
@@ -20,7 +23,9 @@ export default function HomePage() {
      {/* <ServicesGrid /> */}
      {/* <PromoStatsSection /> */}
       <ImproveBusinessSection />
-      <SolutionsZigZagSection/>
+      <IndustriesServed/>
+      <TrustStatsBar/>
+      <WorkingProcess/>
       <TestimonialsSection/>
       <MarketingChannelsSection/>
       <FaqSection bgColor="#ffffff" />
