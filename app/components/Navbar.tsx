@@ -14,9 +14,17 @@ const NAV_ITEMS = [
   { label: "Cloud Hosting", href: "/cloud-hosting", hasDropdown: false },
   { label: "Products", href: "/products", hasDropdown: true },
   { label: "Industries", href: "/industries", hasDropdown: false },
-  { label: "Blog", href: "/blog", hasDropdown: false },
+
+  // ✅ Blog dropdown now
+  { label: "Blog", href: "/blog", hasDropdown: true },
+
   { label: "Contact", href: "/contact", hasDropdown: false },
   { label: "Other", href: "/other", hasDropdown: true },
+];
+
+const BLOG_DROPDOWN = [
+  { label: "Cloud Hosting", href: "/blog/cloud-hosting-blog" },
+  { label: "Web Hosting", href: "/blog/web-hosting-blog" },
 ];
 
 const OTHER_DROPDOWN = [
@@ -142,18 +150,20 @@ export default function Navbar() {
   const [showServices, setShowServices] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
   const [showOther, setShowOther] = useState(false);
+  const [showBlog, setShowBlog] = useState(false); // ✅ NEW
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServices, setMobileServices] = useState(false);
   const [mobileProducts, setMobileProducts] = useState(false);
   const [mobileOther, setMobileOther] = useState(false);
+  const [mobileBlog, setMobileBlog] = useState(false); // ✅ NEW
 
-  // ✅ sub-services open category
   const [openServiceCat, setOpenServiceCat] = useState<string | null>(null);
 
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const productsHideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const otherHideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const blogHideTimer = useRef<ReturnType<typeof setTimeout> | null>(null); // ✅ NEW
 
   const openServices = () => {
     if (hideTimer.current) clearTimeout(hideTimer.current);
@@ -182,10 +192,21 @@ export default function Navbar() {
     otherHideTimer.current = setTimeout(() => setShowOther(false), 180);
   };
 
+  // ✅ NEW Blog open/close
+  const openBlog = () => {
+    if (blogHideTimer.current) clearTimeout(blogHideTimer.current);
+    setShowBlog(true);
+  };
+  const scheduleCloseBlog = () => {
+    if (blogHideTimer.current) clearTimeout(blogHideTimer.current);
+    blogHideTimer.current = setTimeout(() => setShowBlog(false), 180);
+  };
+
   const closeAllMenus = () => {
     setShowServices(false);
     setShowProducts(false);
     setShowOther(false);
+    setShowBlog(false); // ✅ NEW
   };
 
   const navRef = useRef<HTMLElement | null>(null);
@@ -199,7 +220,6 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // ✅ Mobile lock scroll + ESC close
   useEffect(() => {
     if (!mobileOpen) return;
 
@@ -216,17 +236,17 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  // ✅ Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false);
     setMobileServices(false);
     setMobileProducts(false);
     setMobileOther(false);
+    setMobileBlog(false); // ✅ NEW
     setOpenServiceCat(null);
   }, [pathname]);
 
-  // ✅ One-at-a-time accordion
-  const toggleAccordion = (key: "services" | "products" | "other") => {
+  // ✅ One-at-a-time accordion (added blog)
+  const toggleAccordion = (key: "services" | "products" | "other" | "blog") => {
     if (key === "services") {
       setMobileServices((v) => {
         const next = !v;
@@ -235,17 +255,27 @@ export default function Navbar() {
       });
       setMobileProducts(false);
       setMobileOther(false);
+      setMobileBlog(false);
     }
     if (key === "products") {
       setMobileProducts((v) => !v);
       setMobileServices(false);
       setMobileOther(false);
+      setMobileBlog(false);
       setOpenServiceCat(null);
     }
     if (key === "other") {
       setMobileOther((v) => !v);
       setMobileServices(false);
       setMobileProducts(false);
+      setMobileBlog(false);
+      setOpenServiceCat(null);
+    }
+    if (key === "blog") {
+      setMobileBlog((v) => !v);
+      setMobileServices(false);
+      setMobileProducts(false);
+      setMobileOther(false);
       setOpenServiceCat(null);
     }
   };
@@ -273,6 +303,7 @@ export default function Navbar() {
             const isServices = item.label === "Services";
             const isProducts = item.label === "Products";
             const isOther = item.label === "Other";
+            const isBlog = item.label === "Blog";
 
             const wrapperProps = isOther
               ? { onMouseEnter: openOther, onMouseLeave: scheduleCloseOther }
@@ -280,6 +311,8 @@ export default function Navbar() {
               ? { onMouseEnter: openServices, onMouseLeave: scheduleCloseServices }
               : isProducts
               ? { onMouseEnter: openProducts, onMouseLeave: scheduleCloseProducts }
+              : isBlog
+              ? { onMouseEnter: openBlog, onMouseLeave: scheduleCloseBlog } // ✅ NEW
               : {};
 
             return (
@@ -294,6 +327,25 @@ export default function Navbar() {
                   {item.label}
                   {item.hasDropdown && <ChevronDown className="h-3 w-3" />}
                 </Link>
+
+                {/* ✅ Blog dropdown desktop */}
+                {isBlog && showBlog && (
+                  <div className="absolute left-1/2 z-50 mt-3 w-56 -translate-x-1/2 rounded-md border border-gray-200 bg-white shadow-lg">
+                    <ul className="py-2 text-[14px] text-[#333]">
+                      {BLOG_DROPDOWN.map((dd) => (
+                        <li key={dd.label}>
+                          <Link
+                            href={dd.href}
+                            onClick={closeAllMenus}
+                            className="block px-4 py-2 hover:bg-gray-100 hover:text-black"
+                          >
+                            {dd.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 {isOther && showOther && (
                   <div className="absolute left-1/2 z-50 mt-3 w-52 -translate-x-1/2 rounded-md border border-gray-200 bg-white shadow-lg">
@@ -335,7 +387,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MEGA MENU */}
+      {/* MEGA MENU (Services) */}
       {showServices && (
         <div className="absolute left-0 right-0 top-full z-40" onMouseEnter={openServices} onMouseLeave={scheduleCloseServices}>
           <div className="w-full bg-white border-t border-gray-200 shadow-xl">
@@ -414,24 +466,33 @@ export default function Navbar() {
               </div>
 
               <ul className="space-y-2 text-[15px] font-medium">
-                {NAV_ITEMS.filter((i) => !i.hasDropdown).map((item) => {
-                  const active = isActiveHref(item.href);
-                  return (
-                    <li key={item.label}>
-                      <Link
-                        href={item.href}
-                        className={`flex items-center justify-between rounded-xl px-4 py-3 transition ${
-                          active ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-black"
-                        }`}
-                      >
-                        <span>{item.label}</span>
-                        {active && <span className="text-xs">●</span>}
-                      </Link>
-                    </li>
-                  );
-                })}
+                {/* 1) Home */}
+                <li>
+                  <Link
+                    href="/"
+                    className={`flex items-center justify-between rounded-xl px-4 py-3 transition ${
+                      isActiveHref("/") ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-black"
+                    }`}
+                  >
+                    <span>Home</span>
+                    {isActiveHref("/") && <span className="text-xs">●</span>}
+                  </Link>
+                </li>
 
-                {/* Services */}
+                {/* 2) About */}
+                <li>
+                  <Link
+                    href="/about"
+                    className={`flex items-center justify-between rounded-xl px-4 py-3 transition ${
+                      isActiveHref("/about") ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-black"
+                    }`}
+                  >
+                    <span>About</span>
+                    {isActiveHref("/about") && <span className="text-xs">●</span>}
+                  </Link>
+                </li>
+
+                {/* 3) Services (accordion) */}
                 <li className="pt-2">
                   <button
                     onClick={() => toggleAccordion("services")}
@@ -452,13 +513,10 @@ export default function Navbar() {
                             return (
                               <div key={cat.title}>
                                 <div className="flex items-center justify-between gap-2">
-                                  {/* ✅ No background by default, only if OPEN or ACTIVE */}
                                   <Link
                                     href={cat.href}
                                     className={`block rounded-lg px-3 py-2 font-semibold transition ${
-                                      isOpen || isActive
-                                        ? "bg-[#FFF7B8] text-black"
-                                        : "text-black hover:bg-[#f6f5f1]"
+                                      isOpen || isActive ? "bg-[#FFF7B8] text-black" : "text-black hover:bg-[#f6f5f1]"
                                     }`}
                                   >
                                     {cat.title}
@@ -506,7 +564,33 @@ export default function Navbar() {
                   </div>
                 </li>
 
-                {/* Products */}
+                {/* 4) Domain */}
+                <li>
+                  <Link
+                    href="/domain"
+                    className={`flex items-center justify-between rounded-xl px-4 py-3 transition ${
+                      isActiveHref("/domain") ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-black"
+                    }`}
+                  >
+                    <span>Domain</span>
+                    {isActiveHref("/domain") && <span className="text-xs">●</span>}
+                  </Link>
+                </li>
+
+                {/* 5) Cloud Hosting */}
+                <li>
+                  <Link
+                    href="/cloud-hosting"
+                    className={`flex items-center justify-between rounded-xl px-4 py-3 transition ${
+                      isActiveHref("/cloud-hosting") ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-black"
+                    }`}
+                  >
+                    <span>Cloud Hosting</span>
+                    {isActiveHref("/cloud-hosting") && <span className="text-xs">●</span>}
+                  </Link>
+                </li>
+
+                {/* 6) Products (accordion) */}
                 <li>
                   <button
                     onClick={() => toggleAccordion("products")}
@@ -541,7 +625,68 @@ export default function Navbar() {
                   </div>
                 </li>
 
-                {/* Other */}
+                {/* 7) Industries */}
+                <li>
+                  <Link
+                    href="/industries"
+                    className={`flex items-center justify-between rounded-xl px-4 py-3 transition ${
+                      isActiveHref("/industries") ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-black"
+                    }`}
+                  >
+                    <span>Industries</span>
+                    {isActiveHref("/industries") && <span className="text-xs">●</span>}
+                  </Link>
+                </li>
+
+                {/* 8) Blog (accordion) */}
+                <li>
+                  <button
+                    onClick={() => toggleAccordion("blog")}
+                    className="flex w-full items-center justify-between rounded-xl px-4 py-3 hover:bg-[#f6f5f1] transition"
+                  >
+                    <span>Blog</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${mobileBlog ? "rotate-180" : ""}`} />
+                  </button>
+
+                  <div className={`grid transition-all duration-200 ${mobileBlog ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                    <div className="overflow-hidden">
+                      <div className="mt-2 rounded-xl border border-[#E0DDCF]/70 bg-white p-3">
+                        <ul className="space-y-1">
+                          {BLOG_DROPDOWN.map((it) => {
+                            const active = isActiveHref(it.href);
+                            return (
+                              <li key={it.label}>
+                                <Link
+                                  href={it.href}
+                                  className={`block rounded-lg px-3 py-2 text-[14px] transition ${
+                                    active ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-[#222]"
+                                  }`}
+                                >
+                                  {it.label}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                {/* 9) Contact */}
+                <li>
+                  <Link
+                    href="/contact"
+                    className={`flex items-center justify-between rounded-xl px-4 py-3 transition ${
+                      isActiveHref("/contact") ? "bg-[#FFF7B8] text-black" : "hover:bg-[#f6f5f1] text-black"
+                    }`}
+                  >
+                    <span>Contact</span>
+                    {isActiveHref("/contact") && <span className="text-xs">●</span>}
+                  </Link>
+                </li>
+
+                {/* 10) Other (accordion) */}
                 <li>
                   <button
                     onClick={() => toggleAccordion("other")}
@@ -576,16 +721,20 @@ export default function Navbar() {
                   </div>
                 </li>
               </ul>
+
             </div>
 
             <div className="sticky bottom-0 border-t border-[#E0DDCF]/70 bg-white p-4">
-              <Link
-                href="/contact"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-black px-4 py-3 text-sm font-semibold text-white hover:opacity-90 transition"
-              >
-                <Mail className="h-4 w-4" />
-                Contact Us
-              </Link>
+            <a
+              href="https://wa.me/923334444825?text=Hi%20LiveBits%2C%20I%20want%20to%20discuss%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-black px-4 py-3 text-sm font-semibold text-white hover:opacity-90 transition"
+            >
+              <Mail className="h-4 w-4" />
+              Contact Us
+            </a>
+
               <div className="mt-2 text-[11px] text-center text-[#555]">
                 Press <span className="font-semibold">ESC</span> to close
               </div>
