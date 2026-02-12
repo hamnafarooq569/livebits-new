@@ -8,9 +8,7 @@ import { ArrowRight } from "lucide-react";
 const INDUSTRIES = [
   {
     title: "Healthcare",
-    desc: `Hospitals, clinics, labs, pharma & wellness brands.
-We build patient-friendly websites, appointment flows, and service landing pages.
-SEO for local discovery and trust-building content that converts.
+    desc: `We develop secure, compliant digital solutions that improve patient engagement, streamline operations, and build trust.
 Performance optimization for fast loading and clean UX.
 Integration support for CRM, forms, and WhatsApp lead capture.
 Security and compliance-ready implementation for sensitive workflows.`,
@@ -18,9 +16,7 @@ Security and compliance-ready implementation for sensitive workflows.`,
   },
   {
     title: "E-Commerce",
-    desc: `Online stores, product brands & marketplaces.
-Conversion-focused product pages and checkout optimization.
-Speed, SEO, and structured data for better rankings.
+    desc: `From startups to growing brands, we help ecommerce businesses scale with high-converting stores and powerful digital strategies.
 Catalog, filters, search, and UI refinements for better UX.
 Payment and delivery integrations with tracking-ready setup.
 Campaign landing pages for seasonal promotions & sales.`,
@@ -28,8 +24,7 @@ Campaign landing pages for seasonal promotions & sales.`,
   },
   {
     title: "Education",
-    desc: `Schools, academies, universities & edtech.
-Admissions funnels, program pages, and inquiry systems.
+    desc: `We support educational institutions with modern websites, learning platforms, and digital tools that enhance learning experiences.
 Fast, clean UI for parents and students across devices.
 Course listings, portals, and content management support.
 SEO for programs, departments, and local student acquisition.
@@ -38,8 +33,7 @@ Brand consistency, visuals, and trust-first presentation.`,
   },
   {
     title: "Technology",
-    desc: `SaaS, startups, IT firms & digital platforms.
-Landing pages built for product clarity and conversion.
+    desc: `Our finance-focused solutions prioritize security, performance, and compliance—helping financial brands build credibility and growth.
 UX writing, onboarding flows, and scalable UI systems.
 Performance-first builds with modern development stacks.
 Analytics-ready pages to measure growth and engagement.
@@ -67,8 +61,7 @@ export default function IndustriesServed() {
           </h2>
 
           <p className="mx-auto mt-3 max-w-3xl text-[14px] text-black/70 md:text-[15px]">
-            We deliver tailored digital solutions across industries that demand
-            performance, trust, and growth.
+            We work with diverse industries, delivering customized digital solutions that solve real challenges and drive measurable results.
           </p>
         </div>
 

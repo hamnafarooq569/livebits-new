@@ -3,35 +3,48 @@
 import React from "react";
 
 interface SolutionSectionProps {
-
   imageSrc?: string;
-  SmallHeading: string;
   MainHeading: string;
-  Paragraph: string;
+  IntroParagraph: string;
+  BulletPoints: string[];
+  EndingParagraph?: string;
 }
 
 const SolutionSection: React.FC<SolutionSectionProps> = ({
   imageSrc,
-  SmallHeading,
   MainHeading,
-  Paragraph,
+  IntroParagraph,
+  BulletPoints,
+  EndingParagraph,
 }) => {
   return (
     <section className="w-full bg-white py-20 px-16">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
 
-      {/* IMAGE + RIGHT TEXT */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-right gap-45">
-                {/* RIGHT TEXT */}
+        {/* LEFT CONTENT */}
         <div className="max-w-2xl">
-          <p className="text-black font-semibold text-[18px]">{SmallHeading}</p>
+          <h3 className="text-[28px] font-bold mb-4">{MainHeading}</h3>
 
-          <h3 className="text-[28px] font-bold mt-3">{MainHeading}</h3>
+          {/* Intro paragraph */}
+          <p className="text-[18px] text-black leading-relaxed mb-4">
+            {IntroParagraph}
+          </p>
 
-          <p className="mt-4 text-[18px] text-black leading-relaxed">{Paragraph}</p>
+          {/* Bullet points */}
+          <ul className="list-disc pl-6 space-y-2 text-[17px] text-black mb-4">
+            {BulletPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
+
+          {/* Ending paragraph */}
+          <p className="text-[18px] text-black leading-relaxed">
+            {EndingParagraph}
+          </p>
         </div>
 
-        {/* LEFT IMAGE BOX */}
-        <div className="w-94 h-94 bg-white rounded-3xl shadow border border-black flex items-right justify-right  overflow-hidden">
+        {/* RIGHT IMAGE */}
+        <div className="w-94 h-94 bg-white rounded-3xl shadow border border-black flex items-center justify-center overflow-hidden">
           {imageSrc ? (
             <img
               src={imageSrc}
@@ -42,7 +55,6 @@ const SolutionSection: React.FC<SolutionSectionProps> = ({
             <div className="text-gray-400 text-sm">Image</div>
           )}
         </div>
-
 
       </div>
     </section>

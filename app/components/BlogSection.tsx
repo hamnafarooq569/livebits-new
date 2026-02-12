@@ -4,10 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 
-interface BlogSectionProps {
-  bgColor?: string;
-}
-
 const posts = [
   {
     id: 1,
@@ -34,18 +30,18 @@ const posts = [
       "From onboarding tweaks to pricing tests, here are practical experiments that can lift your conversion rate without redesigning everything.",
     image: "/blog1.png",
     badge: "Growth",
-    link: "/mobile-funnel-blog", // ✅ add link (warna fallback niche handle ho jayega)
+    link: "/mobile-funnel-blog",
   },
 ];
 
-export default function BlogSection({ bgColor = "bg-white" }: BlogSectionProps) {
+export default function BlogSection() {
   return (
-    <section className={`relative overflow-hidden pt-15 pb-20 ${bgColor}`}>
+    <section className="relative overflow-hidden pt-15 pb-20 bg-[#f8f8f8]">
       <div className="relative z-10 mx-auto max-w-[1250px] px-6 md:px-8">
         {/* HEADER */}
         <div className="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="text-[14px] font-semibold uppercase ">
+            <p className="text-[14px] font-semibold uppercase">
               Latest News & Stories
             </p>
             <h2 className="mt-3 text-[28px] font-bold md:text-[34px]">
@@ -78,7 +74,7 @@ export default function BlogSection({ bgColor = "bg-white" }: BlogSectionProps) 
             const CardInner = (
               <>
                 {/* IMAGE */}
-                <div className="relative h-[230px] w-full overflow-hidden ">
+                <div className="relative h-[230px] w-full overflow-hidden">
                   <Image
                     src={post.image}
                     alt={post.title}
@@ -101,7 +97,6 @@ export default function BlogSection({ bgColor = "bg-white" }: BlogSectionProps) 
                     {post.excerpt}
                   </p>
 
-                  {/* LEARN MORE (visual only, because whole card is clickable) */}
                   <div className="mt-2 inline-flex items-center gap-2 text-[18px] font-semibold text-[#111]">
                     <span className="flex h-8 w-8 items-center justify-center rounded-full border border-black bg-[#fee000] text-[#111] shadow-sm transition-transform group-hover:-translate-y-1">
                       <ArrowUpRight className="h-4 w-4" />
@@ -114,7 +109,6 @@ export default function BlogSection({ bgColor = "bg-white" }: BlogSectionProps) 
               </>
             );
 
-            // ✅ Safe: link ho to Link, warna normal div
             return post.link ? (
               <Link key={post.id} href={post.link} className="block">
                 <article className={className}>{CardInner}</article>

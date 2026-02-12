@@ -27,7 +27,7 @@ export default function AgencyHero() {
           </h1>
 
           <p className="mt-10 border-l-2 border-[#FFD956]/60 pl-4 max-w-xl text-base md:text-xl text-white">
-            Amplify your online presence with LiveBits’ full-stack digital marketing solutions, designed to increase visibility, drive qualified traffic, and convert audiences into long-term customers through data-driven strategy and creative execution.
+            LiveBits is a full-service custom web development agency helping businesses grow through high-performing websites, scalable applications, and result-driven digital solutions—built for speed, security, and success.
           </p>
 
           <div className="mt-10">

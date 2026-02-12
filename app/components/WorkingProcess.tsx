@@ -12,23 +12,23 @@ type Step = {
 const STEPS: Step[] = [
   {
     no: 1,
-    title: "Requirement Analysis",
-    desc: "We understand your goals, gather requirements, and define a clear plan before starting.",
+    title: "Discovery & Strategy",
+    desc: "We understand your business, goals, and audience to create a clear roadmap for success.",
   },
   {
     no: 2,
-    title: "Development",
-    desc: "We build with clean design and strong engineering so your product is fast and reliable.",
+    title: "Design & Planning",
+    desc: "Our team designs user-focused interfaces and plans the technical architecture for maximum performance.",
   },
   {
     no: 3,
-    title: "Implementation or Test Execution",
-    desc: "We test, fix, and refine to ensure everything works smoothly across devices and browsers.",
+    title: "Development & Testing",
+    desc: "We build, test, and optimize your solution to ensure speed, security, and flawless functionality.",
   },
   {
     no: 4,
-    title: "Handover and Customer Support",
-    desc: "We deliver final files, deploy, and stay available for updates, maintenance, and support.",
+    title: "Launch & Growth",
+    desc: "After launch, we monitor performance, provide support, and help scale your digital presence.",
   },
 ];
 
@@ -44,11 +44,10 @@ export default function WorkingProcess() {
         <div className="text-center">
           <p className="text-[13px] font-semibold text-black/70">How It Work?</p>
           <h2 className="mt-2 text-[34px] font-extrabold tracking-tight text-[#111] md:text-[44px]">
-            Our Working Process
+            Our Proven Working Process
           </h2>
           <p className="mx-auto mt-3 max-w-3xl text-[14px] leading-relaxed text-black/60 md:text-[15px]">
-            Discover what sets this apart as the market&apos;s easiest and most powerful platform,
-            and why clients consistently choose us over the competition.
+             A transparent, results-driven process designed to turn ideas into powerful digital solutions.
           </p>
         </div>
 

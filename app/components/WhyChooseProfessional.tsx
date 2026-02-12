@@ -6,24 +6,18 @@ type Feature = {
 };
 
 type WhyChooseProps = {
-  heading: string;
-  highlightedWord: string;
+  headingStart: string;      // pehla heading part
+  highlightedWord: string;   // middle highlight
+  headingEnd: string;        // baqi heading continue
   features: Feature[];
 };
 
 export default function WhyChooseProfessional({
-  heading,
+  headingStart,
   highlightedWord,
+  headingEnd,
   features,
 }: WhyChooseProps) {
-  const safeHeading = heading ?? "";
-  const safeHighlight = highlightedWord ?? "";
-
-  const parts =
-    safeHighlight && safeHeading.includes(safeHighlight)
-      ? safeHeading.split(safeHighlight)
-      : [safeHeading, ""];
-
   // Split features into rows of 2
   const rows: Feature[][] = [];
   for (let i = 0; i < features.length; i += 2) {
@@ -35,9 +29,9 @@ export default function WhyChooseProfessional({
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl font-bold text-black mb-12">
-          {parts[0]}
-          <span className="text-[#fee000]">{safeHighlight}</span>
-          {parts[1] ?? ""}
+          {headingStart}{" "}
+          <span className="text-[#fee000]">{highlightedWord}</span>{" "}
+          {headingEnd}
         </h1>
 
         {/* Feature Rows */}

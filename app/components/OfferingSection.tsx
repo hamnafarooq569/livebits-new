@@ -9,16 +9,14 @@ type OfferingItem = {
 type OfferingSectionProps = {
   heading: string;
   items: OfferingItem[];
-  bgColor?: string;
 };
 
 export default function OfferingSection({
   heading,
   items,
-  bgColor = "#ffffff",
 }: OfferingSectionProps) {
   return (
-    <section className="w-full py-24 px-6" style={{ backgroundColor: bgColor }}>
+    <section className="w-full py-24 px-6 bg-white">
       <div className="mx-auto max-w-7xl">
 
         <h2 className="mt-2 text-[40px] font-extrabold leading-tight text-[#111] md:text-[52px]">

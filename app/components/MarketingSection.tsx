@@ -12,13 +12,13 @@ export default function MarketingChannelsSection() {
         {/* ================= RIGHT SIDE (Content) ================= */}
         <div className="w-full md:max-w-[520px] md:ml-auto text-left  md:text-left">
           <h2 className="text-[32px] font-bold leading-tight ">
-            We use various marketing
-            <br />
-            channels to reach Sales
+            Your Growth-Focused 
+            <br/> 
+            Digital Partner
           </h2>
 
           <p className="mt-3 text-[18px] leading-relaxed text-black md:text-[18px]">
-           LiveBits is a unique web solution provider that stands out in the market by providing exceptional and personalized services.
+           At LiveBits, we don’t just deliver services—we build long-term partnerships by combining creativity, technology, and strategy to help your business grow faster and smarter.
           </p>
 
           {/* thin line under paragraph */}
@@ -28,7 +28,7 @@ export default function MarketingChannelsSection() {
           <div className="mt-5  flex items-center gap-10 text-[#111111] justify-start">
             {/* 50% + Content Strategy */}
             <div className="flex lg:flex-row flex-col items-center gap-3">
-              <p className="lg:text-[28px] font-bold leading-none">50%</p>
+              <p className="lg:text-[28px] font-bold leading-none">90%</p>
               <p className="lg:text-[18px] tracking-widest uppercase text-black/80">
                 Content Strategy
               </p>
@@ -39,7 +39,7 @@ export default function MarketingChannelsSection() {
 
             {/* 70% + Audience Groupup */}
             <div className="flex lg:flex-row flex-col items-center gap-3">
-              <p className="lg:text-[28px] font-bold leading-none">70%</p>
+              <p className="lg:text-[28px] font-bold leading-none">88%</p>
               <p className="lg:text-[18px] tracking-[0.1em] uppercase text-black/80">
                 Audience Groupup
               </p>

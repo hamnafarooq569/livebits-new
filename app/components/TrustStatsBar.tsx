@@ -4,10 +4,10 @@
 import { motion } from "framer-motion";
 
 const STATS = [
-  { value: "469k", label: "Social followers" },
-  { value: "25k+", label: "Happy Clients" },
-  { value: "756+", label: "Projects Done" },
-  { value: "100+", label: "Global branches" },
+  { value: "10k+", label: "Social followers" },
+  { value: "500+", label: "Happy Clients" },
+  { value: "700+", label: "Projects Done" },
+  { value: "2", label: "Global branches" },
 ];
 
 export default function TrustStatsBar() {

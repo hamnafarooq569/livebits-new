@@ -2,162 +2,80 @@
 
 import Image from "next/image";
 
-type ImageBlock = {
-  src: string;
-  alt?: string;
-  width?: number;
-  height?: number;
-  className?: string;
-};
-
 type WhyLiveBitsProps = {
-  heading: string;
-  mainParagraph?: string[];
-  subHeading?: string;
-  subParagraph?: string[];
+  heading1: string;
+  paragraph1: string;
+  image1: string;
 
-  mainImage?: ImageBlock & {
-    position?: "left" | "right";
-  };
-
-  heading2?: string;
-  points2?: string[];
-
-  partnerTitle: string;
-  partnerDescription: string;
-
-  footerTitle: string;
-  footerDescription: string;
-
-  sideImage?: ImageBlock;
+  heading2: string;
+  paragraph2: string;
+  image2: string;
 };
 
 export default function WhyLiveBits({
-  heading,
-  mainParagraph,
-  subHeading,
-  subParagraph,
-  mainImage,
+  heading1,
+  paragraph1,
+  image1,
   heading2,
-  points2,
-  partnerTitle,
-  partnerDescription,
-  footerTitle,
-  footerDescription,
-  sideImage,
+  paragraph2,
+  image2,
 }: WhyLiveBitsProps) {
   return (
     <section className="w-full">
+      {/* ================= BLACK SECTION ================= */}
+      <div className="w-full bg-black px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          
+          {/* IMAGE LEFT */}
+          <div className="flex justify-center lg:justify-start">
+            <Image
+              src={image1}
+              alt="LiveBits section image"
+              width={1200}
+              height={800}
+              sizes="(max-width: 1024px) 92vw, 650px"
+              className="w-full max-w-[650px] h-auto object-contain"
+              priority
+            />
+          </div>
 
-      {/* ================= BLACK BACKGROUND (SECTION 1 + 2) ================= */}
-      <div className="w-full bg-black py-20 px-6">
-        <div className="mx-auto max-w-7xl">
-          {/* SECTION 1 */}
-          <h2 className="text-3xl md:text-[32px] font-bold text-white mb-4">
-            {heading}
-          </h2>
-
-          <div className="flex flex-col lg:flex-row gap-10 items-start">
-            {/* TEXT */}
-            <div className="w-full lg:flex-1 max-w-3xl">
-              {mainParagraph?.map((p, i) => (
-                <p
-                  key={i}
-                  className="mb-4 text-white text-[18px] leading-relaxed"
-                >
-                  {p}
-                </p>
-              ))}
-
-              {subHeading && (
-                <>
-                  <h3 className="text-2xl md:text-[28px] font-bold text-white mt-4 mb-4">
-                    {subHeading}
-                  </h3>
-                  {subParagraph?.map((p, i) => (
-                    <p
-                      key={i}
-                      className="mb-2 text-white text-[18px] leading-relaxed"
-                    >
-                      {p}
-                    </p>
-                  ))}
-                </>
-              )}
-            </div>
-
-            {/* RIGHT IMAGE */}
-            {mainImage && (
-              <div className="w-full lg:w-[52%] lg:-mt-12">
-                <Image
-                  src={mainImage.src}
-                  alt={mainImage.alt || "image"}
-                  width={mainImage.width ?? 520}
-                  height={mainImage.height ?? 420}
-                  className={mainImage.className || "w-full object-contain"}
-                />
-              </div>
-            )}
+          {/* CONTENT RIGHT */}
+          <div className="text-center lg:text-left">
+            <h2 className="text-white font-extrabold leading-tight text-2xl sm:text-3xl lg:text-[36px]">
+              {heading1}
+            </h2>
+            <p className="mt-3 sm:mt-4 text-white/80 text-[15px] sm:text-[16px] lg:text-[18px] leading-relaxed max-w-xl mx-auto lg:mx-0">
+              {paragraph1}
+            </p>
           </div>
         </div>
       </div>
 
-      {/* ================= WHITE BACKGROUND (SECTION 3 + 4 + 5) ================= */}
-      <div className="w-full bg-white py-20 px-6">
-        <div className="mx-auto max-w-7xl">
-
-          {/* SECTION 3 */}
-          <div className="flex flex-col lg:flex-row gap-10 items-start">
-            {/* LEFT IMAGE */}
-            {sideImage && (
-              <div className="w-full lg:w-[45%] sticky top-18">
-                <Image
-                  src={sideImage.src}
-                  alt={sideImage.alt || "side image"}
-                  width={sideImage.width ?? 420}
-                  height={sideImage.height ?? 420}
-                  className={sideImage.className || "w-full object-contain"}
-                />
-              </div>
-            )}
-
-            {/* RIGHT CONTENT */}
-            <div className="w-full lg:w-[55%]">
-              {heading2 && (
-                <>
-                  <h3 className="text-2xl md:text-[28px] font-bold text-black mb-4">
-                    {heading2}
-                  </h3>
-                  <ul className="list-disc pl-6 space-y-1 text-black text-[18px] leading-relaxed">
-                    {points2?.map((p, i) => (
-                      <li key={i}>{p}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </div>
-          </div>
-
-          {/* SECTION 4 – PARTNER */}
-          <div className="mt-8">
-            <h4 className="font-semibold text-black text-[24px] mb-3">
-              {partnerTitle}
-            </h4>
-            <p className="text-black text-[18px] leading-relaxed">
-              {partnerDescription}
+      {/* ================= WHITE SECTION ================= */}
+      <div className="w-full bg-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          
+          {/* CONTENT LEFT */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <h2 className="text-black font-extrabold leading-tight text-2xl sm:text-3xl lg:text-[36px]">
+              {heading2}
+            </h2>
+            <p className="mt-3 sm:mt-4 text-black/70 text-[15px] sm:text-[16px] lg:text-[18px] leading-relaxed max-w-xl mx-auto lg:mx-0">
+              {paragraph2}
             </p>
           </div>
 
-          {/* SECTION 5 – FOOTER TEXT */}
-          <div className="mt-8">
-            <h4 className="font-semibold text-black text-[24px] mb-3">
-              {footerTitle}
-            </h4>
-            <p className="text-black text-[18px] leading-relaxed">
-              {footerDescription}
-            </p>
+          {/* IMAGE RIGHT */}
+          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+            <Image
+              src={image2}
+              alt="LiveBits section image"
+              width={1200}
+              height={800}
+              sizes="(max-width: 1024px) 92vw, 520px"
+              className="w-full max-w-[520px] h-auto object-contain"
+            />
           </div>
-
         </div>
       </div>
     </section>

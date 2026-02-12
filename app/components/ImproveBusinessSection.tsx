@@ -24,13 +24,12 @@ export default function ImproveBusinessSection() {
       <div className="relative z-10 mx-auto max-w-[1450px] px-6 md:px-8">
         {/* Title */}
         <h2 className="text-center text-[38px] md:text-[38px] font-extrabold text-white">
-          We Provide Wide Range of
-          <br />
-          Digital Services
+          Services That
+          We Are Providing
         </h2>
 
         <p className="mt-2 mx-autol text-center text-[18px] text-[#D1D1D1]">
-          At LiveBits, we pride ourselves on crafting unique and innovative web solutions that go beyond the typical website. 
+          We deliver end-to-end digital services designed to help businesses grow, scale, and succeed. 
         </p>
 
         {/* ==== GRID ==== */}
@@ -55,13 +54,11 @@ export default function ImproveBusinessSection() {
     </p>
 
     <h3 className="mt-3 text-[22px] font-semibold leading-snug">
-      Search Engine
-      <br />
-      Optimization
+      Digital Marketing
     </h3>
 
-    <p className="mt-2 text-[16px] text-[#D4D4D4]">
-      Proven SEO strategies that serve the needs of your business.
+    <p className="mt-1 text-[16px] text-[#D4D4D4]">
+      We craft data-driven digital marketing strategies that boost visibility, attract the right audience, and convert traffic into real business growth.
     </p>
 
     <div className="relative my-6 h-24 w-full flex justify-center">
@@ -87,8 +84,8 @@ export default function ImproveBusinessSection() {
           {/* COL 2: Guest Post */}
           <ServiceCard
             icon="/icon3.png"
-            title="Guest Post"
-            desc="Guest posting with LiveBits helps you build authority and expand your digital reach."
+            title="Graphic Designing"
+            desc="From brand identities to marketing creatives, we design visuals that make your brand unforgettable."
             link="/service/content-marketing/guest-post"
             withCurve
           />
@@ -100,11 +97,10 @@ export default function ImproveBusinessSection() {
           >
             <div className="max-w-[65%]">
               <h3 className="mt-1 text-[22px] font-semibold leading-snug">
-                Ecommerce Web Design
+                Web Design & Development
               </h3>
               <p className="text-[16px] mt-2 text-[#D5D5D5]">
-                LiveBits delivers fully custom web development solutions tailored
-                to your business goals, performance needs, and growth plans.
+                We design and develop fast, secure, and user-friendly websites tailored to your business goals—optimized for performance, SEO, and conversions.
               </p>
 
               <Link
@@ -139,11 +135,11 @@ export default function ImproveBusinessSection() {
                 height={28}
               />
             </div>
-            <h3 className="mt-2 text-[22px] font-semibold leading-snu">
-              Logo Animation
+            <h3 className="mt-2 text-[22px] font-semibold">
+             Video Animation
             </h3>
             <p className="text-[16px] mt-2 text-[#D5D5D5]">
-              LiveBits delivers unique, professional logo designs tailored to your audience.
+              Engage, explain, and convert with eye-catching video animations designed to tell your story.
             </p>
 
             <Link
@@ -159,15 +155,15 @@ export default function ImproveBusinessSection() {
           <ServiceCard
             icon="/icon2.png"
             title="App Development"
-            desc="LiveBits develops custom, high-performance apps that boost revenue, and growth."
+            desc="We build high-performance apps for Android and iOS with seamless, scalable experiences."
             link="service/app-development"
           />
 
           {/* SECOND ROW – COL 4: Cloud Computing */}
           <ServiceCard
             icon="/icon4.png"
-            title="UI-UX Design"
-            desc="Creates immersive brand activation campaigns that boost visibility."
+            title="Ecommerce Solutions"
+            desc="Our ecommerce solutions help you sell smarter with optimized stores and seamless journeys."
             link="/service/graphic-design/ui-ux-design"
           />
         </div>
