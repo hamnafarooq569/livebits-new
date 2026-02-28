@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CursorTooltip from "./CursorTooltip";
 
 type QuoteSectionProps = {
   title: string;
@@ -113,7 +114,49 @@ export default function QuoteSection({ title, subtitle }: QuoteSectionProps) {
               {subtitle}
             </p>
 
-            {/* ... your existing left content remains same ... */}
+            {/* TRUST STRIP */}
+            <div className="mt-15 mb-10px flex flex-col lg:flex-row items-center gap-10 text-sm font-medium text-white">
+              <CursorTooltip label="Review Us on DesignRush">
+                <a
+                  href="https://www.designrush.com/agency/profile/livebits#reviews"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="relative h-12 w-35">
+                    <Image
+                      src="/review-badge.png"
+                      alt="Review us on DesignRush"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </a>
+              </CursorTooltip>
+
+              <div className="hidden h-10 w-px md:flex relative">
+                <div className="absolute left-1/2 top-0 h-10 w-[3px] bg-white/25 rotate-[18deg]" />
+              </div>
+
+              <div className="flex items-center gap-4 text-[14px]">
+                <div>
+                  <p className="font-semibold text-white">
+                    Best Digital Agency of 2024
+                  </p>
+
+                  <CursorTooltip label="Best Digital Agency of 2024 Forbes">
+                    <div className="relative h-10 w-35 items-center -ml-5">
+                      <Image
+                        src="/forbes.png"
+                        alt="Forbes"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </CursorTooltip>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* RIGHT CONTENT (FORM) */}

@@ -7,7 +7,7 @@ export const data = [
     productheading1: "Streamline Your HR Operations with LiveBits",
     productparagraph1:
       "Manual HR processes waste time, increase errors, and reduce productivity. LiveBits’ HR System centralizes employee management, automates payroll, tracks leaves, and monitors performance, helping businesses across Pakistan save time and reduce HR friction.",
-    img1:"/placeholder.png",
+    img1:"/attendence-benefits.png",
     productheading2: "Why Your Business Needs an HR Management System",
     productparagraph3:
       "Manual HR management is inefficient and error-prone. With LiveBits HR System, you can:",
@@ -20,7 +20,7 @@ export const data = [
     ],
     productparagraph4:
       "Ideal for offices, factories, schools, healthcare centers, and service-based businesses.",
-    img2: "/solution.png",
+    img2: "/attendence-management.png",
 
     systemworkheadingstart: "How",
     systemworkheadinghighlight: "HR Management System",
@@ -115,7 +115,7 @@ export const data = [
       "Manual reporting and fragmented data can slow decision-making and reduce efficiency. LiveBits’ MIS Solutions centralize your business information, automate reporting, and provide real-time analytics to help businesses across Pakistan make smarter, faster decisions.",
     productparagraph2:
       "With our solution, you get consolidated dashboards, accurate reporting, and insights into all business processes—so you can focus on growth instead of data management.",
-    img1: "/placeholder.png",
+    img1: "/mis-benefits.png",
 
     productheading2: "Why Your Business Needs an MIS Solution",
     productparagraph3:
@@ -127,7 +127,7 @@ export const data = [
       "Gain actionable insights",
       "Integrate seamlessly with HR, Attendance, and Accounting systems",
     ],
-    img2: "/placeholder.png",
+    img2: "/mis-streamline.png",
 
     systemworkheadingstart: "How",
     systemworkheadinghighlight: "MIS Solutions",
@@ -180,7 +180,7 @@ export const data = [
   productheading1: "Streamline Your Sales Operations with LiveBits",
   productparagraph1:
     "Manual billing and inventory tracking slow down business and create errors. LiveBits’ POS Software automates billing, tracks stock in real time, manages customers, and provides instant reports—helping businesses across Pakistan operate efficiently.",
-    img1:"/placeholder.png",
+    img1:"/pos-benefits.png",
 
   productheading2: "Why Your Business Needs a POS System",
   productparagraph3:
@@ -194,7 +194,7 @@ export const data = [
   ],
   productparagraph4:
     "Ideal for retail stores, restaurants, pharmacies, clothing shops, and service outlets.",
-  img2:"/placeholder.png",
+  img2:"/pos-system-retail.png",
 
   systemworkheadingstart: "How",
   systemworkheadinghighlight: "POS Software",
@@ -263,7 +263,7 @@ export const data = [
   productheading1: "Streamline Your HR Operations with LiveBits",
   productparagraph1:
     "Manual HR processes waste time, increase errors, and reduce productivity. LiveBits’ HR System centralizes employee management, automates payroll, tracks leaves, and monitors performance, helping businesses across Pakistan save time and reduce HR friction.",
-    img1:"/placeholder.png",
+    img1:"/benefits-of-hr-module.png",
   
   productheading2: "Why Your Business Needs an HR Management System",
   productparagraph3:
@@ -277,7 +277,7 @@ export const data = [
   ],
   productparagraph4:
     "Ideal for offices, factories, schools, healthcare centers, and service-based businesses.",
-    img2:"/placeholder.png",
+    img2:"/hr-module-system.png",
 
 
   systemworkheadingstart: "How",

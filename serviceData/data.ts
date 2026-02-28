@@ -44,7 +44,7 @@ export const data = [
         img1:"/digital marketing-01.png",
         textheading2:"Why Choose LiveBits",
         textdetail2:"LiveBits is not just another digital marketing agency—we are your growth partner. We focus on understanding your business goals, target audience, and industry challenges before creating customized strategies. Our team combines creativity with data-driven insights to deliver measurable results. We prioritize transparency, performance tracking, and continuous optimization to ensure every campaign delivers value. With experience across multiple industries in Pakistan, we help businesses build strong online presence, generate quality leads, and achieve long-term success.",
-        img2:"/image-2.png",
+        img2:"/digital marketing changed image.png",
         processheading:"Digital Marketing Process",
         processtext:"LiveBits provides effective digital marketing services to grow your brand online. Our process includes audience analysis, strategy planning, content creation, social media and ad campaign management, performance tracking, and continuous optimization to increase engagement, leads, and conversions across digital platforms.",
         process:[
@@ -216,7 +216,7 @@ export const data = [
         textheading:"Why Your Business Needs Content Marketing",
         textdetail:"Customers today don’t just buy—they research, compare, and trust brands that educate them. Content marketing helps your business appear at every stage of the customer journey, from awareness to decision-making. It builds credibility, improves search visibility, and generates consistent organic traffic without relying entirely on paid ads. For businesses in Pakistan, content marketing is a powerful way to stand out in competitive markets, establish authority, and create long-term relationships with customers while supporting SEO and lead generation.",
 
-        img1:"/content-marketing-second-image-removebg-preview.png",
+        img1:"/content-marketing-new.webp",
 
         textheading2:"Why Choose LiveBits for Content Marketing Services",
         textdetail2:"At LiveBits, we believe content should serve a purpose—not just fill pages. Our team combines creativity with SEO insights to produce content that speaks directly to your target audience. We focus on clarity, value, and consistency to ensure every piece of content supports your business goals. From planning to publishing, we maintain quality, transparency, and performance tracking, helping your brand grow sustainably with content that delivers real results.",
@@ -379,7 +379,7 @@ export const data = [
         textheading2:"Why Choose LiveBits for Paid Search Advertising Services",
         textdetail2:"At LiveBits, we focus on performance and profitability. Our team doesn’t just run ads—we analyze user intent, optimize every campaign element, and track conversions accurately. We prioritize transparency, data-driven decisions, and continuous improvement to ensure every rupee spent delivers value. Whether you’re launching your first campaign or scaling an existing one, we manage your paid search advertising with precision and accountability.",
 
-        img2:"/image-2.png",
+        img2:"/SEM PPC.svg",
 
         processheading:"Paid Search Advertising Process",
         processtext:"Our structured paid search advertising process ensures strategic targeting, efficient budget use, and continuous performance improvement for maximum ROI.",
@@ -537,7 +537,7 @@ export const data = [
         textheading2:"Why Choose LiveBits for Influencer Marketing Services",
         textdetail2:"LiveBits focuses on relevance, authenticity, and results. We don’t chase follower counts—we prioritize engagement quality and audience alignment. Our team manages the entire process, from influencer selection to campaign execution and reporting. With clear communication, performance tracking, and brand-safe collaborations, we help businesses turn influencer partnerships into real growth opportunities.",
 
-        img2:"/infuencer-marketing-2.jfif",
+        img2:"/influencer marketing image 1.jpg",
 
         processheading:"Influencer Marketing Process",
         processtext:"Our structured influencer marketing process ensures authentic collaborations, measurable engagement, and strategic brand growth.",
@@ -769,12 +769,12 @@ export const data = [
     textheading:"Why Your Business Needs Professional Graphic Design",
     textdetail:"Your visuals are the first impression your business makes. Poor or inconsistent design can hurt credibility, while strong graphic design communicates professionalism, builds trust, and attracts customers. Professional graphic design helps businesses in Pakistan stand out from competitors, improve brand recall, and deliver messages effectively across all platforms—both online and offline.",
 
-    img1:"/graphic-design-2.jpg",
+    img1:"/2d-animate.png",
 
     textheading2:"Why Choose LiveBits for Graphic Designing Services",
     textdetail2:"At LiveBits, design is more than aesthetics—it’s strategy. Our team blends creativity with market insight to craft designs that resonate with your audience and reflect your brand identity. From concept to final delivery, we ensure your visuals are consistent, impactful, and optimized for engagement. Whether for digital campaigns, social media, or print materials, LiveBits delivers designs that drive results and elevate your brand presence.",
 
-    img2:"/image-2.png",
+    img2:"/3d-product-2.png",
 
     processheading:"Graphic Design Process",
     processtext:"Our structured graphic design process ensures creativity, brand consistency, and high-quality delivery tailored to your business goals.",
@@ -849,7 +849,7 @@ export const data = [
     textheading2:"Why Choose LiveBits for Logo Design Services",
     textdetail2:"At LiveBits, we combine creativity, strategy, and design expertise to craft logos that resonate with your audience. We don’t just make logos—we create brand symbols that tell your story and leave a lasting impression. With a focus on originality, quality, and client satisfaction, we ensure your logo perfectly represents your brand while maintaining versatility across all platforms.",
 
-    img2:"/image-2.png",
+    img2:"/logo-animation.png",
 
     processheading:"Logo Design Process",
     processtext:"Our structured logo design process ensures creativity, originality, and brand alignment while delivering high-quality results tailored to your business goals.",
@@ -1006,7 +1006,7 @@ export const data = [
     textheading2:"Why Choose LiveBits for UI/UX Design Services",
     textdetail2:"At LiveBits, we focus on user-centric design that balances aesthetics with functionality. Our team studies user behavior, industry trends, and best design practices to create interfaces that are both beautiful and effective. From wireframes to final designs, we ensure your digital platforms are intuitive, engaging, and optimized for conversions. Our designs help your business stand out while delivering meaningful, frictionless experiences to your audience.",
 
-    img2:"/mockup-design.png",
+    img2:"/UI_UX-new.png",
 
     processheading:"UI/UX Design Process",
     processtext:"Our structured UI/UX design process ensures research-driven creativity, usability optimization, and high-quality final delivery tailored to your business goals.",
@@ -1080,12 +1080,12 @@ export const data = [
     textheading:"Why Your Business Needs Packaging Design Services",
     textdetail:"Packaging is the first thing customers notice. Attractive and well-designed packaging can significantly influence purchasing decisions, enhance brand perception, and create a memorable unboxing experience. For businesses in Pakistan, professional packaging design helps products stand out in retail spaces, online marketplaces, and promotional campaigns, increasing sales and customer loyalty.",
 
-    img1:"/product-pakaging-second-image.png",
+    img1:"/P&P-01.png",
 
     textheading2:"Why Choose LiveBits for Packaging Design Services",
     textdetail2:"At LiveBits, we combine creativity with strategy to craft packaging that not only looks great but also sells. Our designs are customer-focused, ensuring your product captures attention, communicates quality, and aligns with your brand values. From initial concept to print-ready files, LiveBits delivers packaging designs that leave a lasting impression and drive business growth.",
 
-    img2:"/image-2.png",
+    img2:"/product-pakaging-second-image.jpg",
 
     processheading:"Packaging Design Process",
     processtext:"Our structured packaging design process ensures creativity, functionality, and brand consistency while delivering high-quality production-ready results.",
@@ -1163,7 +1163,7 @@ export const data = [
     textheading2:"Why Choose LiveBits for Printing Design Services",
     textdetail2:"At LiveBits, we blend creativity with precision. Our team ensures every print design aligns with your brand identity and meets the highest quality standards. From concept to final print-ready files, we focus on visual impact, clarity, and effectiveness. With LiveBits, your printed materials will not just look good—they will help grow your brand presence and leave a lasting impression.",
 
-    img2:"/image-2.png",
+    img2:"/mis-business.png",
 
     processheading:"Printing Design Process",
     processtext:"Our structured printing design process ensures high-quality visuals, brand consistency, and production-ready deliverables tailored to your marketing goals.",
@@ -1397,7 +1397,7 @@ export const data = [
     textheading2:"Why Choose LiveBits for Web Development Services",
     textdetail2:"At LiveBits, we combine technical expertise with creative design to deliver websites that are functional, visually appealing, and optimized for conversions. Our team focuses on user experience, performance, and scalability, ensuring your website grows with your business. From concept to deployment and ongoing support, we provide end-to-end web development solutions that drive measurable results.",
 
-    img2:"/website-1.png",
+    img2:"/website-content.png",
 
     processheading:"Web Development Process",
     processtext:"Our structured web development process ensures strategic planning, high-quality development, strong performance, and long-term scalability for your business website.",
@@ -1476,7 +1476,7 @@ export const data = [
     textheading2:"Why Choose LiveBits for Custom Web Development Services",
     textdetail2:"At LiveBits, we don’t just build websites; we deliver tailored digital solutions. Our team combines technical expertise with strategic insights to create custom web experiences that align with your brand and business goals. From planning and development to testing and ongoing support, LiveBits ensures your website is robust, secure, scalable, and optimized for maximum results.",
 
-    img2: "/b2c-marketing-strategies.webp",
+    img2: "/custom-app-development.png",
 
     processheading:"Custom Web Development Process",
     processtext:"Our structured custom web development process ensures strategic planning, robust architecture, seamless integrations, and long-term scalability for your business.",
@@ -1551,7 +1551,7 @@ export const data = [
     textheading:"Why Your Business Needs Frontend Development Services",
     textdetail:"The frontend is the part of your website or application that users interact with directly. A well-developed frontend ensures your users have an engaging, intuitive, and enjoyable experience, increasing retention, conversions, and overall satisfaction. For businesses in Pakistan, a modern, responsive frontend is critical to compete in today’s digital landscape.",
 
-    img1: "/b2c-marketing-strategies.webp",
+    img1: "/website-content.png",
 
     textheading2:"Why Choose LiveBits for Frontend Development Services",
     textdetail2:"At LiveBits, we focus on creating frontend solutions that combine aesthetics with functionality. Our developers work closely with UI/UX designers to ensure that your website or web application is visually appealing, highly interactive, and optimized for performance. With expertise in modern frameworks and responsive design, we deliver frontend experiences that drive engagement and deliver measurable results.",
@@ -1716,7 +1716,7 @@ export const data = [
     textheading2:"Why Choose LiveBits for B2B Web Design Services",
     textdetail2:"At LiveBits, we understand the unique needs of B2B businesses. Our team combines strategic design, user experience, and marketing insights to create websites that impress decision-makers, showcase your expertise, and drive qualified leads. We focus on usability, brand alignment, and performance, delivering websites that support your business growth goals effectively.",
 
-    img2:"wordpress-05.png",
+    img2:"/b2c-marketing-strategies.webp",
 
     processheading:"B2B Web Design Process",
     processtext:"Our structured B2B web design process ensures strategic planning, professional design, and lead-focused optimization tailored to business growth.",
@@ -1791,12 +1791,12 @@ export const data = [
     textheading:"Why Your Business Needs B2C Web Design Services",
     textdetail:"In the B2C market, your website is often the primary channel for sales and customer engagement. A visually appealing, intuitive, and fast website improves user experience, builds trust, and drives conversions. For businesses in Pakistan, professionally designed B2C websites ensure you stand out in competitive markets, retain customers, and maximize revenue.",
 
-    img1:"/b2c-marketing-strategies.webp",
+    img1:"/website.png",
 
     textheading2:"Why Choose LiveBits for B2C Web Design Services",
     textdetail2:"At LiveBits, we understand consumer behavior and design websites that resonate with your audience. Our team combines UI/UX expertise, visual design, and marketing insights to deliver B2C websites that are engaging, responsive, and conversion-optimized. From concept to launch and ongoing support, LiveBits ensures your digital presence drives real business results.",
 
-    img2:"/website.png",
+    img2:"/B2C_web_design_new.png",
 
     processheading:"B2C Web Design Process",
     processtext:"Our structured B2C web design process ensures engaging user experiences, seamless ecommerce functionality, and optimized performance for maximum conversions.",
@@ -1876,7 +1876,7 @@ export const data = [
     textheading2:"Why Choose LiveBits for Software Development Services",
     textdetail2:"At LiveBits, we combine technical expertise with business insights to deliver software that solves real problems. Our team develops scalable, secure, and efficient solutions tailored to your workflows. From initial analysis to deployment and ongoing support, LiveBits ensures your software drives measurable business growth.",
 
-    img2:"/image-2.png",
+    img2:"/custom-web-development.png",
 
     processheading:"Software Development Process",
     processtext:"Our structured software development process ensures scalable architecture, reliable performance, and secure deployment tailored to your business objectives.",
@@ -1950,12 +1950,12 @@ export const data = [
     textheading:"Why Your Business Needs ERP Development Services",
     textdetail:"ERP systems centralize business processes, reduce manual work, and improve data-driven decision-making. For businesses in Pakistan, custom ERP solutions help manage operations efficiently, enhance collaboration across departments, and provide real-time insights into financials, inventory, HR, and more. Tailored ERP systems ensure your software works exactly like your business needs, boosting productivity and long-term growth.",
 
-    img1:"/erp.png",
+    img1:"/wordpress-05.png",
 
     textheading2:"Why Choose LiveBits for ERP Development Services",
     textdetail2:"LiveBits combines technical expertise with business strategy to deliver ERP systems that scale with your business. Our team ensures each ERP solution is secure, reliable, and fully aligned with your operational requirements. From planning and development to integration and ongoing support, LiveBits ensures your ERP system enhances efficiency, reduces errors, and supports sustainable business growth.",
 
-    img2:"/wordpress-05.png",
+    img2:"/erp-2.png",
 
     processheading:"ERP Development Process",
     processtext:"Our structured ERP development process ensures seamless implementation, secure architecture, and long-term scalability tailored to your business operations.",
@@ -2026,12 +2026,12 @@ export const data = [
     textheading:"Why Your Business Needs Odoo Development Services",
     textdetail:"Odoo is a powerful ERP platform that centralizes all your business processes—finance, sales, inventory, HR, and more. With custom Odoo development, businesses in Pakistan can automate workflows, reduce manual errors, and gain real-time insights into operations. A tailored Odoo solution ensures that your ERP works exactly how your business functions, helping you save time and improve productivity.",
 
-    img1:"/b2c-marketing-strategies.webp",
+    img1:"/website-content.png",
 
     textheading2:"Why Choose LiveBits for Odoo Development Services",
     textdetail2:"At LiveBits, we specialize in delivering end-to-end Odoo solutions that align perfectly with your business objectives. Our developers customize, integrate, and optimize Odoo to maximize efficiency, enhance collaboration, and improve decision-making. We provide expert guidance, hands-on implementation, and ongoing support to ensure your Odoo system delivers long-term value.",
 
-    img2:"/image-2.png",
+    img2:"/odoo_development.png",
 
     processheading:"Odoo Development Process",
     processtext:"Our structured Odoo development process ensures smooth implementation, tailored customization, reliable integrations, and long-term system performance.",
@@ -2264,12 +2264,12 @@ export const data = [
     textheading:"Why Your Business Needs Android App Development Services",
     textdetail:"Android apps help businesses reach a wider audience, increase engagement, and improve customer retention. For businesses in Pakistan, a professionally developed Android app allows you to offer convenience, streamline communication, and create a direct channel with your customers—ultimately boosting sales and brand loyalty.",
 
-    img1:"custom-development-2.jfif",
+    img1:"/custom-app-development.png",
 
     textheading2:"Why Choose LiveBits for Android App Development Services",
     textdetail2:"At LiveBits, we combine technical expertise, creative design, and industry insights to deliver Android apps that meet your business goals and exceed user expectations. Our developers focus on performance, usability, and scalability, ensuring your app runs smoothly on all Android devices. From concept to launch and ongoing support, LiveBits provides end-to-end solutions.",
 
-    img2:"/android-development-2.jfif",
+    img2:"/custom-web-development.png",
 
     processheading:"Android App Development Process",
     processtext:"Our structured Android app development process ensures strategic planning, smooth user experience, secure functionality, and long-term scalability across devices.",
@@ -2663,7 +2663,7 @@ export const data = [
     textheading:"Why Your Business Needs Magento Ecommerce Development Services",
     textdetail:"Magento is a powerful and flexible ecommerce platform that supports complex and large-scale online stores. For businesses in Pakistan, a Magento store allows you to manage inventory, products, and orders efficiently while providing a seamless shopping experience. With custom Magento development, you can scale your business, improve conversions, and gain a competitive edge in the ecommerce market.",
 
-    img1:"/ios-app-development-2.jfif",
+    img1:"/ios.png",
 
     textheading2:"Why Choose LiveBits for Magento Ecommerce Development Services",
     textdetail2:"LiveBits specializes in creating Magento stores that are visually appealing, fast, and easy to manage. Our team combines design expertise, technical proficiency, and ecommerce insights to deliver stores that attract, engage, and convert visitors. From development and customization to deployment and support, we provide end-to-end Magento solutions tailored to your business.",
@@ -2743,12 +2743,12 @@ export const data = [
     textheading:"Why Your Business Needs Wix Website Development Services",
     textdetail:"Wix provides an easy-to-use platform for creating websites without complex coding. For businesses in Pakistan, a professional Wix website ensures a strong online presence, enhances user experience, and allows for quick updates. With custom development, your Wix website will stand out, be fully optimized, and help drive traffic and conversions.",
 
-    img1:"/b2c-marketing-strategies.webp",
+    img1:"/website-1.png",
 
     textheading2:"Why Choose LiveBits for Wix Website Development Services",
     textdetail2:"At LiveBits, we specialize in creating Wix websites that are visually appealing, fast, and easy to manage. Our team ensures your website reflects your brand identity, engages visitors, and provides an excellent user experience. From design and customization to launch and post-launch support, we deliver end-to-end Wix solutions tailored for your business.",
 
-    img2:"/website-1.png",
+    img2:"/b2c-marketing-strategies.webp",
 
     processheading:"Wix Website Development Process",
     processtext:"Our structured Wix website development process ensures strategic planning, seamless customization, optimized performance, and long-term scalability.",
@@ -2987,7 +2987,7 @@ export const data = [
     textheading2:"Why Choose LiveBits for 2D Animation Services",
     textdetail2:"At LiveBits, we combine creative storytelling, design expertise, and technical skills to produce 2D animations that resonate with your audience. Every animation is crafted to deliver your message effectively, with high-quality visuals and professional execution. From concept to final delivery, we provide end-to-end 2D animation solutions.",
 
-    img2:"/image-2.png",
+    img2:"/2d-animate.png",
 
     processheading:"2D Animation Process",
     processtext:"Our structured 2D animation process ensures strategic planning, creative storytelling, smooth production, and high-quality final delivery.",
@@ -3062,7 +3062,7 @@ export const data = [
     textheading:"Why Your Business Needs 3D Animation Services",
     textdetail:"3D animations provide a realistic and immersive way to showcase products, ideas, or services. For businesses in Pakistan, 3D animation helps explain complex concepts, impress clients, increase engagement, and make marketing materials more compelling—ultimately leading to higher conversions and stronger brand presence.",
 
-    img1:"/3d-product-2.jfif",
+    img1:"/3d-product-2.png",
 
     textheading2:"Why Choose LiveBits for 3D Animation Services",
     textdetail2:"At LiveBits, we combine technical expertise, creative storytelling, and attention to detail to produce high-quality 3D animations. Our team ensures every project is visually impressive, professionally executed, and aligned with your brand goals. From concept to final delivery, LiveBits provides end-to-end 3D animation solutions that captivate audiences.",
@@ -3142,7 +3142,7 @@ export const data = [
     textheading:"Why Your Business Needs Motion Graphics Services",
     textdetail:"Motion graphics are a powerful visual storytelling tool that can communicate ideas quickly, engage audiences, and improve brand recall. For businesses in Pakistan, motion graphics help simplify information, enhance marketing campaigns, and make digital content more dynamic, professional, and shareable.",
 
-    img1:"/animated-gifs-2.jfif",
+    img1:"/animated-gifs-2-new.png",
 
     textheading2:"Why Choose LiveBits for Motion Graphics Services",
     textdetail2:"At LiveBits, we combine creativity, technical expertise, and design strategy to produce motion graphics that leave an impact. Each project is crafted to align with your brand identity, engage your audience, and deliver measurable results. From concept to delivery, we provide end-to-end motion graphics solutions tailored to your needs.",
@@ -3621,7 +3621,7 @@ export const data = [
     textheading2:"Why Choose LiveBits for Product Animation Videos",
     textdetail2:"At LiveBits, we combine creativity, technical expertise, and storytelling to produce product animation videos that engage your audience and communicate your product’s value effectively. Each animation is tailored to your brand, visually captivating, and designed to drive conversions. From concept to delivery, we provide end-to-end product animation solutions.",
 
-    img2:"/3d-product-2.jfif",
+    img2:"/3d-product-2.png",
 
     processheading:"Product Animation Video Process",
     processtext:"Our structured product animation video process ensures strategic planning, detailed modeling, creative execution, and high-quality final delivery.",
@@ -3659,6 +3659,420 @@ export const data = [
     ],
 },
 
+{
+    slug:"product-fashion-photography",
+    title: "Product and Fashion Photography",
+    subtitle: "LiveBits offers professional Product and Fashion Photography services that highlight your brand’s style, showcase your products effectively, and engage your audience across e-commerce platforms, social media, and marketing campaigns. Our photography solutions combine creativity, precision, and technical expertise to make your products and fashion collections stand out.",
+    offeringheading: "What Our Product and Fashion Photography Services Include",
 
+    offering:[
+        {
+            title:"Product Photography",
+            description:"Capture your products in high-resolution images that display every detail, texture, and color accurately for e-commerce websites, catalogs, and online marketplaces."
+        },
+        {
+            title:"Fashion Photography",
+            description:"Showcase apparel, accessories, and designer collections with visually stunning photos that reflect style, trends, and brand identity."
+        },
+        {
+            title:"Lookbook & Editorial Shoots",
+            description:"Create professional lookbooks and editorial spreads to promote seasonal collections or highlight specific fashion campaigns."
+        },
+        {
+            title:"Lifestyle Photography",
+            description:"Integrate products into real-life settings to connect with your audience, enhance relatability, and boost conversion rates."
+        },
+        {
+            title:"360° Product Photography",
+            description:"Offer interactive, rotatable product images that allow customers to view items from every angle, increasing trust and engagement."
+        },
+        {
+            title:"Post-Production & Editing",
+            description:"Enhance your photos with professional retouching, color correction, background removal, and compositing to achieve polished, high-quality visuals."
+        },
+    ],
+
+    textheading:"Why Your Business Needs Product and Fashion Photography",
+    textdetail:"High-quality Product and Fashion Photography is crucial for brands looking to attract customers, increase online sales, and enhance brand perception. For businesses in Pakistan and beyond, professional photography highlights product details and quality, boosts engagement on social media and websites, creates a consistent brand image, and increases customer trust and conversions.",
+
+    img1:"/3d product-animation.png",
+
+    textheading2:"Why Choose LiveBits for Product and Fashion Photography",
+    textdetail2:"At LiveBits, we combine creative vision, technical skills, and industry experience to deliver photography that resonates with your target audience. Each shoot is tailored to showcase your products or fashion line in the best possible light, with attention to composition, lighting, and aesthetics. From concept planning to final retouching, we provide end-to-end photography solutions.",
+
+    img2:"/photography.png",
+
+    processheading:"Our Product and Fashion Photography Process",
+    processtext:"LiveBits follows a structured and creative approach to ensure every product and fashion shoot delivers high-quality, visually compelling results that align with your brand identity and marketing goals.",
+
+    process:[
+        {
+            number: "01",
+            processtitle:"Requirement Analysis",
+            processdescription:"Understand your brand, target audience, and photography goals",                
+        },
+        {
+            number: "02",
+            processtitle:"Concept & Moodboard Planning",
+            processdescription:"Define the style, theme, and visual approach",                
+        },
+        {
+            number: "03",
+            processtitle:"Shoot Preparation",
+            processdescription:"Arrange models, props, lighting, and location setup",                
+        },
+        {
+            number: "04",
+            processtitle:"Photography Session",
+            processdescription:"Capture high-quality images using professional equipment and techniques",                
+        },
+        {
+            number: "05",
+            processtitle:"Post-Production & Retouching",
+            processdescription:"Enhance images with color correction, editing, and background adjustments",                
+        },
+        {
+            number: "06",
+            processtitle:"Delivery & Support",
+            processdescription:"Provide final images in the desired format with ongoing support for revisions",                
+        },
+    ],
+
+    faqs: 
+    [
+        {
+            question: "What types of photography do you provide?",
+            answer: "We offer product photography, fashion photography, lifestyle shoots, lookbooks, editorial spreads, and 360° product imaging."
+        },
+        {
+            question: "How long does a photography project take?",
+            answer: "The timeline depends on project complexity. Typical shoots take 1–3 days, with post-production completed in 3–7 days."
+        },
+        {
+            question: "Do you provide models or props for fashion shoots?",
+            answer: "Yes. We can arrange professional models, styling, and props to ensure your photoshoot aligns with your vision."
+        },
+        {
+            question: "Can you optimize photos for e-commerce platforms and social media?",
+            answer: "Absolutely. We deliver images in sizes, resolutions, and formats tailored for websites, Instagram, Facebook, and online stores."
+        },
+        {
+            question: "Do you offer revisions after the shoot?",
+            answer: "Yes. We provide multiple revisions in post-production to ensure final images meet your expectations."
+        },
+    ],
+},
+
+{
+    slug:"company-profile-development",
+    title: "Company Profile Development",
+    subtitle: "LiveBits provides professional Company Profile Development services designed to showcase your business identity, highlight your services, and strengthen your brand presence. Our expert team crafts company profiles that communicate your vision, values, and achievements clearly to clients, investors, and stakeholders.",
+    offeringheading: "What Our Company Profile Development Services Include",
+
+    offering:[
+        {
+            title:"Corporate Profile Writing",
+            description:"Develop a well-structured profile that communicates your company’s story, mission, vision, and achievements effectively."
+        },
+        {
+            title:"Visual Design & Branding",
+            description:"Combine modern design elements, typography, and graphics to create visually appealing company profiles that reflect your brand identity."
+        },
+        {
+            title:"Portfolio & Services Showcase",
+            description:"Highlight your services, projects, and accomplishments to engage potential clients and partners."
+        },
+        {
+            title:"Digital & Print Profiles",
+            description:"Deliver company profiles in both print-ready formats and digital versions suitable for websites, presentations, and emails."
+        },
+        {
+            title:"Custom Content Creation",
+            description:"We write compelling content, including About Us sections, team introductions, milestones, and client testimonials."
+        },
+        {
+            title:"Post-Production & Editing",
+            description:"Refine the company profile with professional layout design, proofreading, and editing to ensure a polished final output."
+        },
+    ],
+
+    textheading:"Why Your Business Needs Company Profile Development",
+    textdetail:"A professionally developed company profile is crucial for building credibility, attracting clients, and enhancing brand perception. For businesses in Pakistan and globally, company profiles help communicate your brand story and values clearly, showcase products, services, and past achievements, build trust among investors, partners, and clients, and create a consistent, professional brand image.",
+
+    img1:"/company-profile-development (1).png",
+
+    textheading2:"Why Choose LiveBits for Company Profile Development",
+    textdetail2:"At LiveBits, we combine strategic storytelling, design expertise, and content professionalism to deliver company profiles that resonate with your target audience. Each profile is tailored to highlight your strengths and unique selling points. From concept planning to final delivery, we provide end-to-end company profile development solutions.",
+
+    img2:"/google ads image 2.jpg",
+
+    processheading:"Our Company Profile Development Process",
+    processtext:"LiveBits follows a structured approach to create impactful company profiles that clearly communicate your brand identity, services, and achievements while maintaining professional design and messaging standards.",
+
+    process:[
+        {
+            number: "01",
+            processtitle:"Requirement Analysis",
+            processdescription:"Understand your business, audience, and objectives",                
+        },
+        {
+            number: "02",
+            processtitle:"Concept & Structure Planning",
+            processdescription:"Outline sections, design style, and content flow",                
+        },
+        {
+            number: "03",
+            processtitle:"Content Creation",
+            processdescription:"Craft compelling narratives, team introductions, and service descriptions",                
+        },
+        {
+            number: "04",
+            processtitle:"Design & Layout",
+            processdescription:"Apply branding, graphics, and visuals to enhance readability",                
+        },
+        {
+            number: "05",
+            processtitle:"Review & Editing",
+            processdescription:"Proofread, refine, and make revisions based on feedback",                
+        },
+        {
+            number: "06",
+            processtitle:"Delivery & Support",
+            processdescription:"Provide final profile in digital and print-ready formats with ongoing support",                
+        },
+    ],
+
+    faqs: 
+    [
+        {
+            question: "What type of company profiles can you create?",
+            answer: "We develop corporate profiles, business portfolios, digital profiles, and print-ready profiles tailored for clients, investors, and partners."
+        },
+        {
+            question: "How long does it take to develop a company profile?",
+            answer: "Typical projects take 1–3 weeks depending on content complexity and design requirements."
+        },
+        {
+            question: "Can you include my services, team, and client testimonials?",
+            answer: "Yes. We include detailed service descriptions, team bios, project highlights, and testimonials to create a comprehensive profile."
+        },
+        {
+            question: "Do you provide both digital and print-ready formats?",
+            answer: "Absolutely. We deliver profiles optimized for web, PDF, presentations, and print materials."
+        },
+        {
+            question: "Do you offer revisions after completion?",
+            answer: "Yes. We provide multiple revisions to ensure your company profile meets your vision and expectations."
+        },
+    ],
+},
+
+{
+    slug:"professional-cv-development",
+    title: "Professional CV Development",
+    subtitle: "LiveBits provides expert Professional CV Development services to help job seekers stand out, showcase their skills, and secure their desired opportunities. Our team creates well-structured, visually appealing, and content-rich CVs tailored to industry standards and employer expectations.",
+    offeringheading: "What Our Professional CV Development Services Include",
+
+    offering:[
+        {
+            title:"Resume Writing",
+            description:"Craft a compelling CV that highlights your experience, achievements, and skills in a clear and professional format."
+        },
+        {
+            title:"Cover Letter Writing",
+            description:"Create personalized cover letters that complement your CV and strengthen your application."
+        },
+        {
+            title:"LinkedIn Profile Optimization",
+            description:"Enhance your LinkedIn profile to match your CV and improve your online professional presence."
+        },
+        {
+            title:"ATS-Friendly CVs",
+            description:"Develop CVs optimized for Applicant Tracking Systems (ATS) to ensure your application passes automated screenings."
+        },
+        {
+            title:"Industry-Specific CVs",
+            description:"Tailor CVs to specific industries, job roles, and career levels to maximize impact."
+        },
+        {
+            title:"Post-Development Editing & Review",
+            description:"Refine content, formatting, and presentation to deliver a polished, professional CV ready for submission."
+        },
+    ],
+
+    textheading:"Why You Need Professional CV Development",
+    textdetail:"A professionally developed CV is essential for making a strong first impression, improving your chances of interview calls, and effectively showcasing your qualifications. For professionals in Pakistan and globally, expert CV development highlights skills, experience, and achievements effectively, aligns with industry standards and employer expectations, increases chances of landing interviews and job offers, and creates a consistent, polished professional image.",
+
+    img1:"/CV-removebg-preview.png",
+
+    textheading2:"Why Choose LiveBits for Professional CV Development",
+    textdetail2:"At LiveBits, we combine strategic writing, formatting expertise, and career insights to deliver professional CVs that stand out. Each CV is customized to reflect your unique strengths and career goals. From drafting to final edits, we provide end-to-end CV development solutions designed to help you succeed in today’s competitive job market.",
+
+    img2:"/google ads image 2.jpg",
+
+    processheading:"Our Professional CV Development Process",
+    processtext:"LiveBits follows a structured and strategic approach to craft impactful CVs that clearly communicate your strengths, achievements, and career goals while maintaining ATS compatibility and professional formatting standards.",
+
+    process:[
+        {
+            number: "01",
+            processtitle:"Requirement Analysis",
+            processdescription:"Understand your career goals, experience, and target roles",                
+        },
+        {
+            number: "02",
+            processtitle:"Information Gathering",
+            processdescription:"Collect relevant details on education, skills, and achievements",                
+        },
+        {
+            number: "03",
+            processtitle:"Drafting & Structuring",
+            processdescription:"Create a professional layout with clear sections and headings",                
+        },
+        {
+            number: "04",
+            processtitle:"Content Optimization",
+            processdescription:"Highlight key achievements, skills, and experiences for maximum impact",                
+        },
+        {
+            number: "05",
+            processtitle:"Design & Formatting",
+            processdescription:"Apply modern, ATS-friendly design for readability and professionalism",                
+        },
+        {
+            number: "06",
+            processtitle:"Review & Finalization",
+            processdescription:"Proofread, refine, and provide the final CV in multiple formats",                
+        },
+    ],
+
+    faqs: 
+    [
+        {
+            question: "What types of CVs can you create?",
+            answer: "We create professional, ATS-friendly, industry-specific, executive-level, and entry-level CVs."
+        },
+        {
+            question: "How long does it take to develop a professional CV?",
+            answer: "Typically, CV development takes 3–7 days depending on complexity and required revisions."
+        },
+        {
+            question: "Do you provide cover letters along with the CV?",
+            answer: "Yes. We craft personalized cover letters that complement your CV and improve your application impact."
+        },
+        {
+            question: "Can you optimize my CV for online applications and LinkedIn?",
+            answer: "Absolutely. We ensure your CV and LinkedIn profile are aligned and optimized for recruiters."
+        },
+        {
+            question: "Do you offer revisions after CV completion?",
+            answer: "Yes. We provide multiple revisions to ensure your CV perfectly represents your professional profile."
+        },
+    ],
+},
+
+{
+    slug:"brand-activation",
+    title: "Brand Activation",
+    subtitle: "LiveBits provides expert Brand Activation services designed to bring your brand to life, engage your audience, and create memorable experiences. Our team specializes in creating strategic campaigns that strengthen brand awareness, increase customer interaction, and drive measurable results.",
+    offeringheading: "What Our Brand Activation Services Include",
+
+    offering:[
+        {
+            title:"Experiential Marketing",
+            description:"Design interactive campaigns and events that allow consumers to experience your brand first-hand."
+        },
+        {
+            title:"Promotional Campaigns",
+            description:"Develop creative campaigns across multiple channels to boost product launches, seasonal promotions, and brand visibility."
+        },
+        {
+            title:"Sampling & Demonstrations",
+            description:"Engage your audience through product sampling, live demonstrations, and hands-on experiences that leave a lasting impression."
+        },
+        {
+            title:"Event Management",
+            description:"Organize brand-related events, activations, and pop-ups that connect your brand with the target audience effectively."
+        },
+        {
+            title:"Digital Brand Activation",
+            description:"Leverage online platforms, social media, and influencer collaborations to create interactive digital campaigns that expand reach and engagement."
+        },
+        {
+            title:"Post-Campaign Analysis & Reporting",
+            description:"Evaluate campaign performance with detailed analytics to understand impact, ROI, and opportunities for improvement."
+        },
+    ],
+
+    textheading:"Why Your Business Needs Brand Activation",
+    textdetail:"Effective Brand Activation helps businesses establish a strong brand presence, connect emotionally with consumers, and encourage loyalty. For companies in Pakistan and globally, brand activation enhances brand awareness and recognition, builds stronger emotional connections with your audience, drives engagement, leads, and sales, and differentiates your brand in competitive markets.",
+
+    img1:"/banner-design.png",
+
+    textheading2:"Why Choose LiveBits for Brand Activation",
+    textdetail2:"At LiveBits, we combine creativity, strategy, and execution expertise to deliver brand activation campaigns that resonate with your audience. Each activation is tailored to reflect your brand identity, target your ideal customers, and create meaningful engagement. From concept to post-campaign analysis, we provide comprehensive brand activation solutions.",
+
+    img2:"/attendence-management.png",
+
+    processheading:"Our Brand Activation Process",
+    processtext:"LiveBits follows a strategic and results-driven approach to execute impactful brand activation campaigns that create strong audience engagement and measurable business growth.",
+
+    process:[
+        {
+            number: "01",
+            processtitle:"Requirement Analysis",
+            processdescription:"Understand your brand, goals, and target audience",                
+        },
+        {
+            number: "02",
+            processtitle:"Concept Development",
+            processdescription:"Plan creative strategies and campaign ideas",                
+        },
+        {
+            number: "03",
+            processtitle:"Campaign Execution",
+            processdescription:"Implement on-ground and digital activations with precision",                
+        },
+        {
+            number: "04",
+            processtitle:"Audience Engagement",
+            processdescription:"Engage customers through interactive experiences",                
+        },
+        {
+            number: "05",
+            processtitle:"Monitoring & Optimization",
+            processdescription:"Track performance and optimize engagement during the campaign",                
+        },
+        {
+            number: "06",
+            processtitle:"Reporting & Insights",
+            processdescription:"Provide detailed analysis of results and ROI",                
+        },
+    ],
+
+    faqs: 
+    [
+        {
+            question: "What types of brand activation campaigns can you create?",
+            answer: "We develop experiential marketing, promotional campaigns, product demonstrations, event activations, and digital brand campaigns."
+        },
+        {
+            question: "How long does a brand activation campaign take?",
+            answer: "Timeline varies by campaign size and complexity, typically between 2–6 weeks."
+        },
+        {
+            question: "Can you manage both online and offline activations?",
+            answer: "Yes. We specialize in integrated campaigns that combine on-ground experiences with digital engagement."
+        },
+        {
+            question: "Do you provide analytics and performance reports after activation?",
+            answer: "Absolutely. We deliver detailed reports highlighting engagement, reach, and ROI."
+        },
+        {
+            question: "Can brand activation help increase customer loyalty?",
+            answer: "Yes. Well-executed activations create memorable brand experiences that encourage long-term customer loyalty."
+        },
+    ],
+}
 
 ]

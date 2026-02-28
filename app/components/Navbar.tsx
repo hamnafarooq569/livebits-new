@@ -5,6 +5,9 @@ import { usePathname } from "next/navigation";
 import { ChevronDown, Mail } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { title } from "process";
+import { HiRefresh } from "react-icons/hi";
+import { hr } from "framer-motion/client";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/", hasDropdown: false },
@@ -109,6 +112,16 @@ const SERVICES_DROPDOWN = [
       { label: "UI-UX Design", href: "/service/ui-ux-design-services" },
     ],
   },
+  {
+  title: "Others",
+  href: "/other",
+  items: [
+    { label: "Product and Fashion Photography", href: "/service/product-fashion-photography" },
+    { label: "Company Profile Development", href: "/service/company-profile-development" },
+    { label: "Professional CV Development", href: "/service/professional-cv-development" },
+    { label: "Brand Activation", href: "/service/brand-activation" },
+    ],
+}
 ];
 
 const PRODUCTS_DROPDOWN = [
