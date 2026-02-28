@@ -1,5 +1,6 @@
 import BlogSection from "./components/BlogSection";
 import InfiniteImage from "./components/ClientSlide";
+import ECommerce from "./components/ECommerce";
 import FaqSection from "./components/FaqSection";
 import Hero from "./components/Hero";
 import ImproveBusinessSection from "./components/ImproveBusinessSection";
@@ -78,6 +79,7 @@ export default function HomePage() {
       <WorkingProcess />
       <TestimonialsSection />
       <MarketingChannelsSection />
+      <ECommerce/>
 
       {/* ✅ FAQ SECTION */}
       <FaqSection

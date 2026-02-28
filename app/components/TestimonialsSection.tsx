@@ -87,7 +87,7 @@ export default function TestimonialsSection({
       className="relative overflow-hidden py-20 pt-10"
       style={{ backgroundColor: bgColor }}
     >
-      <div className="relative z-10 mx-auto max-w-FULL px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-FULL px-6 text-center max-w-7xl">
         <h2 className="text-[28px] font-extrabold tracking-tight text-[#111] md:text-[30px]">
           What Say Our Customers
         </h2>
