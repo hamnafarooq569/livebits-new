@@ -76,10 +76,11 @@ export default function HomePage() {
       <ImproveBusinessSection />
       <IndustriesServed />
       <TrustStatsBar />
+      <ECommerce/>
       <WorkingProcess />
       <TestimonialsSection />
       <MarketingChannelsSection />
-      <ECommerce/>
+
 
       {/* ✅ FAQ SECTION */}
       <FaqSection

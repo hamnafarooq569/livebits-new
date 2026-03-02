@@ -5,12 +5,12 @@ import ServicesPageSection from "../components/ServiceHero";
 import ServiceSection from "../components/ServiceSection";
 
 const servicesData = [
-  { title: "Digital Marketing", description: "We create data-backed digital marketing strategies that increase brand visibility, generate quality leads, and boost conversions across all major platforms.", image: "/app-development.webp", },
-  { title: "Graphic Designing", description: "Our creative designs build strong brand identities through visually compelling graphics that leave a lasting impression." , image: "/app-development.webp",},
-  { title: "Web Design & Development", description: "We design and develop fast, responsive, and SEO-friendly websites that deliver seamless user experiences and real business results.", image: "/app-development.webp", },
-  { title: "Mobile App Development", description: "We build high-performance mobile applications with intuitive interfaces and scalable features for Android and iOS platforms.", image: "/app-development.webp", },
-  { title: "Ecommerce Solutions", description: "Our ecommerce services help businesses sell online efficiently with conversion-focused stores and secure, scalable solutions.", image: "/app-development.webp", },
-  { title: "Video Animation", description: "We produce engaging video animations that simplify complex ideas, capture attention, and elevate your brand storytelling.", image: "/app-development.webp", },
+  { title: "Digital Marketing", description: "We create data-backed digital marketing strategies that increase brand visibility, generate quality leads, and boost conversions across all major platforms.", image: "/i/Digital Marketing.png", },
+  { title: "Graphic Designing", description: "Our creative designs build strong brand identities through visually compelling graphics that leave a lasting impression." , image: "/i/Graphic Designing.png",},
+  { title: "Web Design & Development", description: "We design and develop fast, responsive, and SEO-friendly websites that deliver seamless user experiences and real business results.", image: "/i/App Development.png", },
+  { title: "Mobile App Development", description: "We build high-performance mobile applications with intuitive interfaces and scalable features for Android and iOS platforms.", image: "/i/8.png", },
+  { title: "Ecommerce Solutions", description: "Our ecommerce services help businesses sell online efficiently with conversion-focused stores and secure, scalable solutions.", image: "/i/Ecommerce.png", },
+  { title: "Video Animation", description: "We produce engaging video animations that simplify complex ideas, capture attention, and elevate your brand storytelling.", image: "/i/3.png", },
 ];
 
 
