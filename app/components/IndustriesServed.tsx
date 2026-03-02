@@ -8,60 +8,42 @@ import { ArrowRight } from "lucide-react";
 const INDUSTRIES = [
   {
     title: "Healthcare",
-    desc: `We develop secure, compliant digital solutions that improve patient engagement, streamline operations, and build trust.
-Performance optimization for fast loading and clean UX.
-Integration support for CRM, forms, and WhatsApp lead capture.
-Security and compliance-ready implementation for sensitive workflows.`,
-    href: "/industries/healthcare",
+    desc: `Create patient-centric healthcare apps that streamline operations, reduce admin work, and improve care quality.`,
+    href: "/industries",
   },
   {
     title: "E-Commerce",
-    desc: `From startups to growing brands, we help ecommerce businesses scale with high-converting stores and powerful digital strategies.
-Catalog, filters, search, and UI refinements for better UX.
-Payment and delivery integrations with tracking-ready setup.
-Campaign landing pages for seasonal promotions & sales.`,
-    href: "/industries/ecommerce",
+    desc: `Boost sales with modern storefronts, inventory management, and omnichannel shopping experiences.`,
+    href: "/industries/",
   },
   {
     title: "Education",
-    desc: `We support educational institutions with modern websites, learning platforms, and digital tools that enhance learning experiences.
-Fast, clean UI for parents and students across devices.
-Course listings, portals, and content management support.
-SEO for programs, departments, and local student acquisition.
-Brand consistency, visuals, and trust-first presentation.`,
-    href: "/industries/education",
+    desc: `Revolutionize learning with e-learning platforms, LMS systems, and student engagement solutions.`,
+    href: "/industries/",
   },
   {
-    title: "Technology",
-    desc: `Our finance-focused solutions prioritize security, performance, and compliance—helping financial brands build credibility and growth.
-UX writing, onboarding flows, and scalable UI systems.
-Performance-first builds with modern development stacks.
-Analytics-ready pages to measure growth and engagement.
-Pitch, pricing, and feature pages designed for trust.`,
-    href: "/industries/technology",
+    title: "Finance",
+    desc: `Build secure, compliant financial platforms that improve operational efficiency and customer experience.`,
+    href: "/industries/",
   },
 ];
 
-function splitDesc(desc: string, visibleLines = 2) {
-  const lines = desc.split("\n").map((l) => l.trim()).filter(Boolean);
-  const visible = lines.slice(0, visibleLines).join(" ");
-  const hidden = lines.slice(visibleLines).join(" ");
-  return { visible, hidden };
-}
-
 export default function IndustriesServed() {
   return (
-    <section className="relative bg-[#EEDC88] py-20 px-6">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative overflow-hidden bg-white py-20 px-6">
+      {/* soft top background like screenshot */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[220px] bg-gradient-to-b from-[#FFF6B3] via-[#FFFBE6] to-transparent" />
+
+      <div className="mx-auto max-w-7xl relative z-10">
         {/* Heading */}
         <div className="text-center">
-
-          <h2 className="mt-3 text-[34px] font-extrabold text-black md:text-[46px]">
+          <p className="text-[13px] font-semibold text-black/70">Neches</p>
+          <h2 className="mt-2 text-[34px] font-extrabold tracking-tight text-[#111] md:text-[44px]">
             Industries We Serve
-          </h2>
 
-          <p className="mx-auto mt-3 max-w-3xl text-[14px] text-black/70 md:text-[15px]">
-            We work with diverse industries, delivering customized digital solutions that solve real challenges and drive measurable results.
+          </h2>
+          <p className="mx-auto mt-3 max-w-3xl text-[14px] leading-relaxed text-black/60 md:text-[15px]">
+             We work with diverse industries, delivering customized digital solutions that solve real challenges and drive measurable results.
           </p>
         </div>
 
@@ -70,67 +52,44 @@ export default function IndustriesServed() {
 
         {/* Cards */}
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {INDUSTRIES.map((item, idx) => {
-            const { visible, hidden } = splitDesc(item.desc, 2); // ✅ 2 lines-ish visible
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: idx * 0.08 }}
-                viewport={{ once: true }}
-              >
-                <Link href={item.href} className="block h-full">
-                  <div
-                    className="
-                      group relative h-full cursor-pointer
-                      rounded-[14px]
-                      border border-black
-                      bg-white/80
-                      p-7
-                      shadow-[0_10px_30px_rgba(0,0,0,0.15)]
-                      backdrop-blur-[4px]
-                      transition-all duration-300
-                      hover:-translate-y-1
-                      hover:shadow-[0_18px_45px_rgba(0,0,0,0.22)]
-                    "
-                  >
-                    <h3 className="text-[20px] font-bold text-black">
-                      {item.title}
-                    </h3>
+          {INDUSTRIES.map((item, idx) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: idx * 0.08 }}
+              viewport={{ once: true }}
+              className="h-full"
+            >
+              <Link href={item.href} className="block h-full">
+                <div
+                  className="
+                    group relative h-full cursor-pointer
+                    rounded-[14px]
+                    border border-black/25
+                    bg-white  
+                    p-7
+                    shadow-[0_18px_55px_rgba(0,0,0,0.0)]
+                    backdrop-blur-[4px]
+                    transition-all duration-300
+                    hover:scale-105 hover:shadow-[0_3px_10px_rgba(0,0,0,0.65)]
+                  "
+                >
+                  <h3 className="text-[20px] font-bold text-black">
+                    {item.title}
+                  </h3>
 
-                    <div className="mt-3 text-[13px] leading-relaxed text-black/70">
-                      <p className="line-clamp-2">{visible}</p>
-
-                      {hidden && (
-                        <p
-                          className="
-                            mt-2
-                            line-clamp-4
-                            text-black/70
-                            blur-[2px]
-                            opacity-75
-                            transition-all duration-300
-                            group-hover:blur-0
-                            group-hover:opacity-100
-                          "
-                        >
-                          {hidden}
-                        </p>
-                      )}
-                    </div>
-
-
-
-                  </div>
-                </Link>
-              </motion.div>
-            );
-          })}
+                  <p className="mt-3 text-[13px] leading-relaxed text-black/70">
+                    {item.desc}
+                  </p>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
 
         {/* Center CTA */}
-        <div className="mt-18 flex justify-center">
+        <div className="mt-16 flex justify-center">
           <Link
             href="/industries"
             className="
